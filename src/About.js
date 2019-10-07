@@ -1,11 +1,17 @@
 import React, { Component } from 'react'
 import Header from './Header'
 
-class Intro extends Component {
+class About extends Component {
     render() {
         return (
             <div>
-                <Header />
+                {/* <Header /> */}
+                <section id="banner">
+                    <header>
+                        <h2>About Ms. Vegas</h2>
+                        <p>Big. Bendy. Balanced.</p>
+                    </header>
+                </section>
                 <section id="intro" className="container">
                     <div className="row">
                         <div className="col-6">
@@ -81,4 +87,4 @@ class Intro extends Component {
     }
 }
 
-export default Intro;
+export default About;
