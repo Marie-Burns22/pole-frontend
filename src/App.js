@@ -3,18 +3,20 @@ import React from 'react';
 import './assets/css/main.css'
 import Navbar from './Navbar';
 import Foot from './Foot';
-import Intro from './Intro';
-import Header from './Header';
+
+
 
 import Main from './Main';
+import Header from './Header';
+import About from './About';
 
 
 function App() {
   return (
     <div>
-      <Navbar />
       <Header />
-      <Intro />
+      <Navbar />
+      <About />
 			<Main />
       <Foot />
     </div>

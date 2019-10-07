@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ServiceContainer from './ServiceContainer';
-import News from './News';
+import News from './ArticleContainer';
 
 import './assets/css/main.css'
 
@@ -10,9 +10,9 @@ class Main extends Component{
             <div>
                 {/* <!-- Main --> */}
                 <section id="main">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-12">
                                 <ServiceContainer />
 
                             </div>

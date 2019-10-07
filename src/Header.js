@@ -3,15 +3,15 @@ import React, { Component } from 'react'
 class Header extends Component {
     render() {
         return (
-            <div>
-                {/* <!-- Banner --> */}
-                <section id="banner">
-                    <header>
-                        <h2>Howdy. This is in header.</h2>
-                        <p>A responsive template by HTML5 UP</p>
-                    </header>
-                </section>
-            </div>
+            // <body class="homepage is-preload">
+            // <div id="page-wrapper">
+                // <section id="header">
+            // <section className="box">
+                <img className="full-logo" src="./images/Logo-Black-NoBackground.png" alt="" />
+            // </section>
+                // </section>
+            // </div>
+            // </body>
         )
     }
 }
