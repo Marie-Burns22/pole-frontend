@@ -7,8 +7,8 @@ class Header extends Component {
                 {/* <!-- Banner --> */}
                 <section id="banner">
                     <header>
-                        <h2>Howdy. This is in header.</h2>
-                        <p>A responsive template by HTML5 UP</p>
+                        <h2>About Ms. Vegas</h2>
+                        <p>Dynamic. Passionate. Hilarious. Flexible</p>
                     </header>
                 </section>
             </div>
