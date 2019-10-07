@@ -7,7 +7,7 @@ class ClassCard extends Component {
                 <section className="box">
                     <a href="#" className="image featured"><img src="images/pic02.jpg" alt="" /></a>
                     <header>
-                        <h3>Class Name</h3>
+                        <h3>Service Name</h3>
                     </header>
                     <p>Class description</p>
                     <footer>

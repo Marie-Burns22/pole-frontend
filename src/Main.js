@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ServiceContainer from './ServiceContainer';
-import News from './News';
+import News from './ArticleContainer';
 
 import './assets/css/main.css'
 

@@ -8,7 +8,7 @@ class ServiceContainer extends Component {
             <div>
                 <section>
                     <header className="major">
-                        <h2>Classes</h2> 
+                        <h2>Services</h2> 
                     </header>
                     <div className="row">
                         <ClassCard />

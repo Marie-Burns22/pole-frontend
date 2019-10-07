@@ -8,7 +8,7 @@ class Header extends Component {
                 <section id="banner">
                     <header>
                         <h2>About Ms. Vegas</h2>
-                        <p>Dynamic. Passionate. Hilarious. Flexible</p>
+                        <p>Big. Bendy. Balanced.</p>
                     </header>
                 </section>
             </div>
