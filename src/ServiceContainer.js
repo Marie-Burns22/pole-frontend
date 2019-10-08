@@ -5,28 +5,41 @@ import ServiceCard from './ServiceCard'
 class ServiceContainer extends Component {
     render() {
         return (
-            <div>
-                <section>
-                    <header className="major">
-                        <h2>Services</h2> 
-                    </header>
+        <div>
+            <section id="main">
+                <div className="container">
                     <div className="row">
-                        <ClassCard />
-                        <ClassCard />
-                        <ClassCard />
+                        <div className="col-12">
+                            <header className="major">
+                                <h2>Services</h2> 
+                            </header>
+                            <div className="row">
+                                <ClassCard />
+                                <ClassCard />
+                                <ClassCard />
+                            </div>
+                        </div>
                     </div>
+                </div>
+            </section>
 
-                    <header className="major">
-                        <h2>Event Hosting and Performances</h2>
-                    </header>
+            <section id="main">
+                <div className="container">
                     <div className="row">
-                        <ServiceCard />
-                        <ServiceCard />
-                        <ServiceCard />
+                        <div className="col-12">
+                            <header className="major">
+                                <h2>Event Hosting and Performances</h2>
+                            </header>
+                            <div className="row">
+                                <ServiceCard />
+                                <ServiceCard />
+                                <ServiceCard />
+                            </div>
+                        </div>
                     </div>
-                </section>
-
-            </div>
+                </div>
+            </section>
+        </div>
         )
     }
 }
