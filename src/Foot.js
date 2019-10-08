@@ -9,26 +9,18 @@ class Foot extends Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-8 col-12-medium">
+                                <header>
+                                    <h2>Testimonials</h2>
+                                </header>
 
                             </div>
                             <div className="col-4 col-12-medium">
-                                <section>
-                                    <header>
-                                        <h2>Vegas in Miami</h2>
-                                    </header>
-                                    <a href="#" className="image featured"><img src="images/pic10.jpg" alt="" /></a>
-                                    
-                                    <footer>
-                                        <ul className="actions">
-                                            <li><a href="#" className="button">Find out more</a></li>
-                                        </ul>
-                                    </footer>
-                                </section>
+                                <a href="#" className="image featured"><img src="images/Logo-White-NoBackground.png" alt="" /></a>
                             </div>
                             <div className="col-4 col-6-medium col-12-small">
                                 <section>
                                     <header>
-                                        <h2>Pole Event Links</h2>
+                                        <h2>Videos?</h2>
                                     </header>
                                     <ul className="divided">
                                         <li><a href="#">Lorem ipsum dolor sit amet sit veroeros</a></li>
@@ -39,7 +31,7 @@ class Foot extends Component {
                             <div className="col-4 col-6-medium col-12-small">
                                 <section>
                                     <header>
-                                        <h2>Local Organizations</h2>
+                                        <h2>Testimonials</h2>
                                     </header>
                                     <ul className="divided">
                                         <li><a href="#">Lorem ipsum dolor sit amet sit veroeros</a></li>
@@ -63,17 +55,14 @@ class Foot extends Component {
                                         <li>
                                             <h3>Address</h3>
                                             <p>
-                                                Miami, Florida
+                                                Miami, FL 33186
 											</p>
                                         </li>
                                         <li>
                                             <h3>Mail</h3>
-                                            <p><a href="#">someone@untitled.tld</a></p>
+                                            <p><a href="#">info@vegasinmiamipole.com</a></p>
                                         </li>
-                                        <li>
-                                            <h3>Phone</h3>
-                                            <p>(800) 000-0000</p>
-                                        </li>
+                                       
                                     </ul>
                                 </section>
                             </div>
@@ -86,7 +75,7 @@ class Foot extends Component {
    {/* <!-- Copyright --> */}
                     <div id="copyright">
                         <ul className="links">
-                            <li>&copy; Untitled. All rights reserved.</li><li>Webseit Template Design: <a href="http://html5up.net">HTML5 UP</a></li><li>Website Built by: <a href="mariecburns.com">Marie Burns</a></li>
+                            <li>&copy; Untitled. All rights reserved.</li><li>Website Template Design: <a href="http://html5up.net">HTML5 UP</a></li><li>Website Built by: <a href="mariecburns.com">Marie Burns</a></li>
                         </ul>
                     </div>
 

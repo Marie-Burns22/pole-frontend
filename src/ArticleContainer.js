@@ -5,6 +5,12 @@ class ArticleContainer extends Component {
     render() {
         return (
             <div>
+                <section id="banner">
+                    <header>
+                        <h2>Ms. Vegas in the News</h2>
+                        {/* <p>Big. Bendy. Balanced.</p> */}
+                    </header>
+                </section>
                 <section id="main">
                     <div className="container">
                         <div className="row">

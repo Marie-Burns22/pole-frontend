@@ -6,12 +6,17 @@ class ServiceContainer extends Component {
     render() {
         return (
         <div>
+            <section id="banner">
+                <header>
+                    <h2>Services</h2>
+                </header>
+            </section>
             <section id="main">
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
                             <header className="major">
-                                <h2>Services</h2> 
+                                <h2>Private Sessions and Workshops</h2> 
                             </header>
                             <div className="row">
                                 <ClassCard />
