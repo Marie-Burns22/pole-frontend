@@ -1694,8 +1694,8 @@ input, select, textarea {
 		display: inline-block;
 		height: 20rem;
 		align-content: center;
-		padding-top: 0;
-		margin-top: 0;
+		padding: -100px;
+		margin: -100px;
 	}	
 
 	.image {

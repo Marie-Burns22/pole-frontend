@@ -1,14 +1,15 @@
 import React from 'react';
+import {Route, Switch } from 'react-router-dom'
 
 import './assets/css/main.css'
+
 import Navbar from './Navbar';
 import Foot from './Foot';
-
-
-
-import Main from './Main';
 import Header from './Header';
 import About from './About';
+import ServiceContainer from './ServiceContainer';
+import ArticleContainer from './ArticleContainer';
+
 
 
 function App() {
@@ -16,8 +17,12 @@ function App() {
     <div>
       <Header />
       <Navbar />
-      <About />
-			<Main />
+      <Switch>
+        <Route exact path="/" component={About} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/services" component={ServiceContainer} />
+        <Route exact path="/news" component={ArticleContainer} />
+      </Switch>
       <Foot />
     </div>
   );
