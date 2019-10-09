@@ -6,7 +6,7 @@ import './assets/css/main.css'
 import Navbar from './Navbar';
 import Foot from './Foot';
 import Header from './Header';
-import About from './about/About';
+import AboutContainer from './about/AboutContainer';
 import ServiceContainer from './ServiceContainer';
 import ArticleContainer from './ArticleContainer';
 
@@ -18,8 +18,8 @@ function App() {
       <Header />
       <Navbar />
       <Switch>
-        <Route exact path="/" component={About} />
-        <Route exact path="/about" component={About} />
+        <Route exact path="/" component={AboutContainer} />
+        <Route exact path="/about" component={AboutContainer} />
         <Route exact path="/services" component={ServiceContainer} />
         <Route exact path="/news" component={ArticleContainer} />
       </Switch>
