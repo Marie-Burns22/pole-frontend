@@ -3,12 +3,12 @@ import {Route, Switch } from 'react-router-dom'
 
 import './assets/css/main.css'
 
-import Navbar from './Navbar';
-import Foot from './Foot';
-import Header from './Header';
+import Navbar from './PageLayout/Navbar';
+import Foot from './PageLayout/Foot';
+import Header from './PageLayout/Header';
 import AboutContainer from './about/AboutContainer';
-import ServiceContainer from './ServiceContainer';
-import ArticleContainer from './ArticleContainer';
+import ServiceContainer from './Services/ServiceContainer';
+import ArticleContainer from './News/ArticleContainer';
 
 
 
