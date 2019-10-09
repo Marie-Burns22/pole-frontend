@@ -4,7 +4,7 @@ class Foot extends Component {
     render() {
         return (
 
-            <body className="homepage is-preload" id="page-wrapper">
+            <div className="homepage is-preload" id="page-wrapper">
                 <section id="footer">
                     <div className="container">
                         <div className="row">
@@ -82,7 +82,7 @@ class Foot extends Component {
             </div>
 
             </section>
-            </body>
+            </div>
 
 
         );

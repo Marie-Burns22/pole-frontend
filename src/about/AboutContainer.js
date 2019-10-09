@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import Header from './Header'
+import Header from '../PageLayout/Header'
+import AwardsList from './AwardsList'
 
-class About extends Component {
+class AboutContainer extends Component {
     render() {
         return (
             <div>
@@ -27,12 +28,7 @@ class About extends Component {
                                 <header>
                                     <h2>Awards</h2>
                                 </header>
-                                <ul>
-                                    <li>Kiss My Curves 2019 - Pro Flow Diva Winner, Fierce Diva (advanced) 2nd place</li>
-                                    <li>PSO Golden Gate Pole Championships - Level 3 Silver and Bronze (Low Flow and Entertainment)</li>
-                                    <li>The list will go on, but you will enter them from your dashboard.</li>
-
-                                </ul>
+                                <AwardsList />
                             </section>
                         </div>
                     </div>
@@ -41,9 +37,10 @@ class About extends Component {
                             <section className="first">
                                 <i className="icon solid featured fa-cog"></i>
                                 <header>
-                                    <h2>Classes</h2>
+                                    <h2>Private Sessions and Workshops</h2>
                                 </header>
-                                <p>Descriptions of classes overall.</p>
+                                <p>Ms. Vegas offers quality, affordable and customized individual instruction. Whether you're near or far, you can take advantage of the training she offers online and in person. Push your flexibility to the next level, work on building and perfecting your routines, discover creative floor work or perfect pole moves - Ms. Vegas is happy to help you wherever you are in your fitness journey.
+                                With every lesson comes the Ms. Vegas guarantee to focus on you and your growth! You will not be disappointed in her energy, attention to the client, customization, and the fun and effective workouts she trains.</p>
                                 <ul className="actions">
                                     <li><a href="#" className="button alt sm">Learn More</a></li>
                                 </ul>
@@ -87,4 +84,4 @@ class About extends Component {
     }
 }
 
-export default About;
+export default AboutContainer;
