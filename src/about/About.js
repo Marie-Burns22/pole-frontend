@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import Header from './Header'
+import Header from '../Header'
+import AboutContainer from './AboutContainer'
 
 class About extends Component {
     render() {
@@ -27,12 +28,13 @@ class About extends Component {
                                 <header>
                                     <h2>Awards</h2>
                                 </header>
-                                <ul>
+                                <AboutContainer />
+                                {/* <ul>
                                     <li>Kiss My Curves 2019 - Pro Flow Diva Winner, Fierce Diva (advanced) 2nd place</li>
                                     <li>PSO Golden Gate Pole Championships - Level 3 Silver and Bronze (Low Flow and Entertainment)</li>
                                     <li>The list will go on, but you will enter them from your dashboard.</li>
 
-                                </ul>
+                                </ul> */}
                             </section>
                         </div>
                     </div>

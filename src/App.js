@@ -6,7 +6,7 @@ import './assets/css/main.css'
 import Navbar from './Navbar';
 import Foot from './Foot';
 import Header from './Header';
-import About from './About';
+import About from './about/About';
 import ServiceContainer from './ServiceContainer';
 import ArticleContainer from './ArticleContainer';
 
