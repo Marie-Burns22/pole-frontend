@@ -9,6 +9,7 @@ import Header from './PageLayout/Header';
 import AboutContainer from './about/AboutContainer';
 import ServiceContainer from './Services/ServiceContainer';
 import ArticleContainer from './News/ArticleContainer';
+import Signup from './User/Signup';
 
 
 
@@ -23,6 +24,7 @@ function App() {
         <Route exact path="/services" component={ServiceContainer} />
         <Route exact path="/news" component={ArticleContainer} />
       </Switch>
+      <Signup />
       <Foot />
     </div>
   );
