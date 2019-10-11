@@ -23,6 +23,7 @@ function App() {
         <Route exact path="/about" component={AboutContainer} />
         <Route exact path="/services" component={ServiceContainer} />
         <Route exact path="/news" component={ArticleContainer} />
+        <Route exact path="/booking" component={BookingForm}
       </Switch>
       <Signup />
       <Foot />
