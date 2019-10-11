@@ -6,7 +6,6 @@ class AboutContainer extends Component {
     render() {
         return (
             <div>
-                {/* <Header /> */}
                 <section id="banner">
                     <header>
                         <h2>About Ms. Vegas</h2>
@@ -71,14 +70,7 @@ class AboutContainer extends Component {
                             </section>
                         </div>
                     </div>
-                    {/* <footer>
-                        <ul className="actions">
-                            <li><a href="#" className="button large">Get Started</a></li>
-                            <li><a href="#" className="button alt large">Learn More</a></li>
-                        </ul>
-                    </footer> */}
                 </section>
- 
             </div>
         )
     }

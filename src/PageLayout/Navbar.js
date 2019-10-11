@@ -4,7 +4,7 @@ import {NavLink} from "react-router-dom"
 class Navbar extends Component {
     render() {
         return (
-            <div>
+
                 <nav id="nav">
                     <ul>
                         <li className="current"><NavLink to="/about" >Home</NavLink></li>
@@ -13,7 +13,7 @@ class Navbar extends Component {
                         <li><NavLink to="/news">News</NavLink></li>
                     </ul>
                 </nav>                
-            </div>
+
         )
     }
 }

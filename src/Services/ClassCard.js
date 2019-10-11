@@ -5,7 +5,7 @@ class ClassCard extends Component {
         return (
             <div className="col-4 col-6-medium col-12-small">
                 <section className="box">
-                    <img className="image featured" src="./images/pic01.jpg" alt="" />
+                    <a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
                     <header>
                         <h3>Service Name</h3>
                     </header>

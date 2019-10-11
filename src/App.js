@@ -1,6 +1,5 @@
 import React from 'react';
 import {Route, Switch } from 'react-router-dom'
-
 import './assets/css/main.css'
 
 import Navbar from './PageLayout/Navbar';
@@ -10,15 +9,15 @@ import AboutContainer from './about/AboutContainer';
 import ServiceContainer from './Services/ServiceContainer';
 import ArticleContainer from './News/ArticleContainer';
 import ClassBookingForm from './bookingRequests/ClassBookingForm';
-// import Signup from './User/Signup';
-
-
 
 function App() {
   return (
     <div>
-      <Header />
-      <Navbar />
+      <section id="header">
+        <Header />
+        <Navbar />
+      </section>
+     
       <Switch>
         <Route exact path="/" component={AboutContainer} />
         <Route exact path="/about" component={AboutContainer} />
@@ -26,6 +25,7 @@ function App() {
         <Route exact path="/news" component={ArticleContainer} />
         <Route exact path="/booking" component={ClassBookingForm} />
       </Switch>
+
       <Foot />
     </div>
   );

@@ -15,10 +15,12 @@ class ServiceContainer extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
+
+
                             <header className="major">
                                 <h2>Private Sessions and Workshops</h2> 
                             </header>
-                            <div className="row">
+                                <div className="row">
                                 <ClassCard />
                                 <ClassCard />
                                 <ClassCard />
@@ -26,23 +28,8 @@ class ServiceContainer extends Component {
                         </div>
                     </div>
                 </div>
-            </section>
 
-            <section id="main">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-12">
-                            <header className="major">
-                                <h2>Event Hosting and Performances</h2>
-                            </header>
-                            <div className="row">
-                                <ServiceCard />
-                                <ServiceCard />
-                                <ServiceCard />
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
             </section>
         </div>
         )
