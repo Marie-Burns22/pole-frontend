@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ClassCard from './ClassCard'
-import ServiceCard from './ServiceCard'
+
 
 class ServiceContainer extends Component {
     render() {
