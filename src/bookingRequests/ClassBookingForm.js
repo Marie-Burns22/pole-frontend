@@ -101,12 +101,30 @@ class ClassBookingForm extends Component {
         const DATE_OPTIONS = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
         const { error, isLoaded, timeSlots } = this.state;
         if (error) {
-            return <div> Error: {error.message}</div>;
+            return (
+                <section id="main">
+                    <div> Error: {error.message}</div>;
+                </section>
+            )    
+        } else if ( status === "SUCCESS") {
+            return (
+                <section id="main">
+                    <h2>Thank you for your booking request! Ms. Vegas will contact you shortly with payment information and confirmation.</h2>
+                </section>
+                )
         } else if (!isLoaded) {
             return <div> Loading...</div>;
+        } else if (!this.state.timeSlots || this.state.timeSLots === undefined || this.state.timeSlots.length ===0) {
+            return (
+                <section id="main">
+                    <div className="container">
+                        <h2 className="major"> I am so glad you would like to book a private session! Due to high-demand, all appointments are currently booked. Please email <a href="#">info@vegasinmiamipole.com</a> so we can create more availables time and ensure that they works for your schedule.</h2>
+                    </div>
+                </section>
+            )
         } else {
             return (
-            <main className="inner container">
+                <section id="main">
                 <h2 className="major">Book A Private Session</h2>
                 <p>Use this form to book a private session. Ms. Vegas will reply with payment directions. Once the payment is processed your appointment will be reserved and confirmed.</p>
                 <p> Please use the workshop and event booking form for those services</p>
@@ -148,6 +166,7 @@ class ClassBookingForm extends Component {
                         <div className="field">
                             <label htmlFor="timeSlotId">Choose an avaliable time:</label>
                             <select onChange={this.handleChange} name='timeSlotId' placeholder="Date and Time" value={this.state.timeSlotId}>
+                                <option selected>Select an available time</option>
                                 {timeSlots.map(t => 
                                 (
                                     <option value={t.id} key={t.id}>{(new Date(t.attributes.date)).toLocaleDateString('en-US', DATE_OPTIONS)} at {t.attributes.time} {t.attributes.am_pm}</option>
@@ -167,7 +186,7 @@ class ClassBookingForm extends Component {
                         }
                         {status === "ERROR" && <p>Ooops! There was an error.</p>}
                 </form>
-            </main>
+            </section>
             )
         }
     }
