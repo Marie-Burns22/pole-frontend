@@ -9,7 +9,8 @@ import Header from './PageLayout/Header';
 import AboutContainer from './about/AboutContainer';
 import ServiceContainer from './Services/ServiceContainer';
 import ArticleContainer from './News/ArticleContainer';
-import Signup from './User/Signup';
+import ClassBookingForm from './bookingRequests/ClassBookingForm';
+// import Signup from './User/Signup';
 
 
 
@@ -25,7 +26,7 @@ function App() {
         <Route exact path="/news" component={ArticleContainer} />
         <Route exact path="/booking" component={BookingForm}
       </Switch>
-      <Signup />
+      <ClassBookingForm />
       <Foot />
     </div>
   );
