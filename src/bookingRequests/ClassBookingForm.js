@@ -46,8 +46,32 @@ class ClassBookingForm extends Component {
 
     handleSubmit = event => {
         event.preventDefault()
-        // this.props.userPostFetch(this.state)
+        fetch(`https://vmpole.herokuapp.com/api/v1/time_slots/${time_slot_id}`,{
+            credentials: "include",
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json", 
+                "Accept": "application/json"
+            },
+            body: JSON.stringify(time_slot_id)
+        })
+        .then(response => response.json())
+        .then(
+            (result) => {
+                this.setState({
+                    isLoaded: true,
+                    timeSlots: result.data
+                });
+            },
+            (error) => {
+                this.setState({
+                    isLoaded: true,
+                    error
+                });
+            }
+        )
     }
+    
 
     render() {
         const DATE_OPTIONS = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
