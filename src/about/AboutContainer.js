@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Header from '../PageLayout/Header'
 import AwardsList from './AwardsList'
+import { Link} from 'react-router-dom'
 
 class AboutContainer extends Component {
     render() {
@@ -42,7 +42,7 @@ class AboutContainer extends Component {
                                 <p>Ms. Vegas offers quality, affordable and customized individual instruction. Whether you're near or far, you can take advantage of the training she offers online and in person. Push your flexibility to the next level, work on building and perfecting your routines, discover creative floor work or perfect pole moves - Ms. Vegas is happy to help you wherever you are in your fitness journey.
                                 With every lesson comes the Ms. Vegas guarantee to focus on you and your growth! You will not be disappointed in her energy, attention to the client, customization, and the fun and effective workouts she trains.</p>
                                 <ul className="actions">
-                                    <li><a href="#" className="button alt sm">Learn More</a></li>
+                                    <li><Link to="/services">Learn More</Link></li>
                                 </ul>
                             </section>
                         </div>
@@ -54,7 +54,7 @@ class AboutContainer extends Component {
                                 </header>
                                 <p>Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>
                                 <ul className="actions">
-                                    <li><a href="#" className="button alt sm">Learn More</a></li>
+                                    <li><Link to="/services">Learn More</Link></li>
                                 </ul>
                             </section>
                         </div>
@@ -66,7 +66,7 @@ class AboutContainer extends Component {
                                 </header>
                                 <p>Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>
                                 <ul className="actions">
-                                    <li><a href="#" className="button alt">Learn More</a></li>
+                                    <li><Link to="/news">News</Link></li>
                                 </ul>
                             </section>
                         </div>

@@ -3,8 +3,7 @@ import React, { Component } from 'react'
 class Foot extends Component {
     render() {
         return (
-
-            <div className="homepage is-preload" id="page-wrapper">
+            <div className="homepage is-preload footer" id="page-wrapper">
                 <section id="footer">
                     <div className="container">
                         <div className="row">
@@ -15,7 +14,7 @@ class Foot extends Component {
 
                             </div>
                             <div className="col-4 col-12-medium">
-                                <a href="#" className="image featured"><img src="images/Logo-White-NoBackground.png" alt="" /></a>
+                                <img className="image featured" src="images/Logo-White-NoBackground.png" alt="" />
                             </div>
                             <div className="col-4 col-6-medium col-12-small">
                                 <section>
@@ -23,8 +22,7 @@ class Foot extends Component {
                                         <h2>Videos?</h2>
                                     </header>
                                     <ul className="divided">
-                                        <li><a href="#">Lorem ipsum dolor sit amet sit veroeros</a></li>
-                                        <li><a href="#">Sed et blandit consequat sed tlorem blandit</a></li>
+                                        <li>Maybe link some videos here if they won't fit on the about page.</li>
                                     </ul>
                                 </section>
                             </div>
@@ -34,9 +32,7 @@ class Foot extends Component {
                                         <h2>Testimonials</h2>
                                     </header>
                                     <ul className="divided">
-                                        <li><a href="#">Lorem ipsum dolor sit amet sit veroeros</a></li>
-                                        <li><a href="#">Sed et blandit consequat sed tlorem blandit</a></li>
-                                        
+                                        <li>Testimonials could be listed here or above and this section removed.</li>
                                     </ul>
                                 </section>
                             </div>
@@ -48,7 +44,6 @@ class Foot extends Component {
                                     <ul className="social">
                                         <li><a className="icon brands fa-facebook-f" href="#"><span className="label">Facebook</span></a></li>
                                         <li><a className="icon brands fa-twitter" href="#"><span className="label">Twitter</span></a></li>
-                                        <li><a className="icon brands fa-tumblr" href="#"><span className="label">Tumblr</span></a></li>
                                         <li><a className="icon brands fa-linkedin-in" href="#"><span className="label">LinkedIn</span></a></li>
                                     </ul>
                                     <ul className="contact">

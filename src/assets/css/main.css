@@ -1566,6 +1566,10 @@ input, select, textarea {
 		margin: 2.25em 0 0 0;
 	}
 
+	.footer {
+		background: #252122;
+	}
+
 /* Box */
 
 	.box {
