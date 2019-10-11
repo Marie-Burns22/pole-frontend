@@ -10,7 +10,8 @@ class ClassBookingForm extends Component {
             timeSlotId: "",
             error: null,
             isLoaded: false,
-            timeSlots: []
+            timeSlots: [],
+            status: ""
         };
     }
 
@@ -47,6 +48,24 @@ class ClassBookingForm extends Component {
 
     handleSubmit = event => {
         event.preventDefault();
+        // formspree submissions
+        const form = event.target;
+        const data = new FormData(form);
+        const xhr = new XMLHttpRequest();
+        xhr.open(form.method, form.action);
+        xhr.setRequestHeader("Accept", "application/json");
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState !== XMLHttpRequest.DONE) return;
+            if (xhr.status === 200) {
+                form.reset();
+                this.setState({ status: "SUCCESS" });
+            } else {
+                this.setState({ status: "ERROR" });
+            }
+        };
+        xhr.send(data);
+
+        // Change status from available to requested in API
         let id = this.state.timeSlotId
         console.log("handle submit id:", id)
         fetch(`https://vmpole.herokuapp.com/api/v1/time_slots/${id}`, {
@@ -78,6 +97,7 @@ class ClassBookingForm extends Component {
     }
 
     render() {
+        const { status } = this.state;
         const DATE_OPTIONS = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
         const { error, isLoaded, timeSlots } = this.state;
         if (error) {
@@ -90,7 +110,7 @@ class ClassBookingForm extends Component {
                 <h2 className="major">Book A Private Session</h2>
                 <p>Use this form to book a private session. Ms. Vegas will reply with payment directions. Once the payment is processed your appointment will be reserved and confirmed.</p>
                 <p> Please use the workshop and event booking form for those services</p>
-                <form onSubmit={this.handleSubmit} method="POST" action="https://formspree.io/mcburns2222@gmail.com">
+                    <form onSubmit={this.handleSubmit} method="POST" action="https://formspree.io/mogkngpm">
                     <div className="fields">
                         <div className="field">
                             <label htmlFor="firstName">First Name</label>
@@ -136,7 +156,16 @@ class ClassBookingForm extends Component {
                         </div>
 
                     </div>
-                    <input type='submit' />
+                        {status === "SUCCESS" 
+                        ? 
+                        <p>Thanks!</p> 
+                        : 
+                        // <button>Submit</button>
+                        <ul className="actions">
+                            <li><input type='submit' value="Send Message" /></li>
+                        </ul>
+                        }
+                        {status === "ERROR" && <p>Ooops! There was an error.</p>}
                 </form>
             </main>
             )
