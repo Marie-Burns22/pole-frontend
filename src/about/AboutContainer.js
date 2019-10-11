@@ -1,8 +1,4 @@
 import React, { Component } from 'react'
-<<<<<<< HEAD
-=======
-// import Header from '../PageLayout/Header'
->>>>>>> d269509156abe9a62101daa61755619feea2980f
 import AwardsList from './AwardsList'
 import { Link} from 'react-router-dom'
 
