@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Header from '../PageLayout/Header'
+// import Header from '../PageLayout/Header'
 import AwardsList from './AwardsList'
 
 class AboutContainer extends Component {

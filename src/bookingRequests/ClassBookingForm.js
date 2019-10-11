@@ -1,31 +1,46 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
+import axios from "axios"
+import { tsExternalModuleReference } from '@babel/types';
 // import { userPostFetch } from '../redux/actions';
 
 class ClassBookingForm extends Component {
-    state = {
-        firstName: "",
-        lastName: "",
-        timeSlot: ""
+    constructor(props) {
+        super(props);
+        this.state = {
+            firstName: "",
+            lastName: "",
+            timeSlot: "",
+            error: null,
+            isLoaded: false,
+            timeSlots: []
+        };
     }
 
-    componentDidMount() {
-        fetch('https://vmpole.herokuapp.com/api/v1/time_slots', {
+        componentDidMount() {
+            fetch('https://vmpole.herokuapp.com/api/v1/time_slots', {
             credentials: "include",
             method: 'GET',
             headers: {
-                "Content-Type": "application/json"
-            },
-        })
-            .then(r => r.json())
-            .then(timeSlots => {
-                if (timeSlots.error) {
-                    alert(timeSlots.error)
-                } else {
-                    this.setState({ timeSlots: timeSlots.data })
-                }
+                "Content-Type": "application/json"}
             })
-    }
+            .then(res => res.json())
+            .then(
+                (result) => {
+                    this.setState({
+                        isLoaded: true,
+                        timeSlots: result.data
+                    });
+                },
+                (error) => {
+                    this.setState({
+                        isLoaded: tsExternalModuleReference,
+                        error
+                    });
+                }
+            )
+        }
+    
 
     handleChange = event => {
         this.setState({
@@ -39,9 +54,16 @@ class ClassBookingForm extends Component {
     }
 
     render() {
-        return (
+        const DATE_OPTIONS = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+        const { error, isLoaded, timeSlots } = this.state;
+        if (error) {
+            return <div> Error: {error.message}</div>;
+        } else if (!isLoaded) {
+            return <div> Loading...</div>;
+        } else {
+            return (
             <main className="inner container">
-                <h2 class="major">Book A Private Session</h2>
+                <h2 className="major">Book A Private Session</h2>
                 <p>Use this form to book a private session. Ms. Vegas will reply with payment directions. Once the payment is processed your appointment will be reserved and confirmed.</p>
                 <p> Please use the workshop and event booking form for those services</p>
                 <form onSubmit={this.handleSubmit} method="POST" action="https://formspree.io/mcburns2222@gmail.com">
@@ -81,11 +103,12 @@ class ClassBookingForm extends Component {
 
                         <div className="field">
                             <label htmlFor="timeSlot">Choose an avaliable time:</label>
-                            <select value={this.state.timeSlot} onChange={this.handleChange}
-                                name='timeSlot'
-
-                                id="password"
-                            />
+                            <select onChange={this.handleChange} name='timeSlot'>
+                                {timeSlots.map(t => 
+                                (
+                                    <option key={t.id}>{(new Date(t.attributes.date)).toLocaleDateString('en-US', DATE_OPTIONS)} at {t.attributes.time} {t.attributes.am_pm}</option>
+                                )) }
+                            </select>
                         </div>
 
                     </div>
@@ -93,7 +116,8 @@ class ClassBookingForm extends Component {
                     <input type='submit' />
                 </form>
             </main>
-        )
+            )
+        }
     }
 }
 
