@@ -6,7 +6,8 @@ class ClassBookingForm extends Component {
         this.state = {
             firstName: "",
             lastName: "",
-            timeSlot: "",
+            email: "",
+            timeSlotId: "",
             error: null,
             isLoaded: false,
             timeSlots: []
@@ -45,15 +46,19 @@ class ClassBookingForm extends Component {
     }
 
     handleSubmit = event => {
-        event.preventDefault()
-        fetch(`https://vmpole.herokuapp.com/api/v1/time_slots/${time_slot_id}`,{
+        event.preventDefault();
+        let id = this.state.timeSlotId
+        console.log("handle submit id:", id)
+        fetch(`https://vmpole.herokuapp.com/api/v1/time_slots/${id}`, {
             credentials: "include",
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json", 
                 "Accept": "application/json"
             },
-            body: JSON.stringify(time_slot_id)
+            body: JSON.stringify({
+                status: "requested"
+            })
         })
         .then(response => response.json())
         .then(
@@ -71,7 +76,6 @@ class ClassBookingForm extends Component {
             }
         )
     }
-    
 
     render() {
         const DATE_OPTIONS = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
@@ -122,17 +126,16 @@ class ClassBookingForm extends Component {
                         </div>
 
                         <div className="field">
-                            <label htmlFor="timeSlot">Choose an avaliable time:</label>
-                            <select onChange={this.handleChange} name='timeSlot'>
+                            <label htmlFor="timeSlotId">Choose an avaliable time:</label>
+                            <select onChange={this.handleChange} name='timeSlotId' placeholder="Date and Time" value={this.state.timeSlotId}>
                                 {timeSlots.map(t => 
                                 (
-                                    <option key={t.id}>{(new Date(t.attributes.date)).toLocaleDateString('en-US', DATE_OPTIONS)} at {t.attributes.time} {t.attributes.am_pm}</option>
+                                    <option value={t.id} key={t.id}>{(new Date(t.attributes.date)).toLocaleDateString('en-US', DATE_OPTIONS)} at {t.attributes.time} {t.attributes.am_pm}</option>
                                 )) }
                             </select>
                         </div>
 
                     </div>
-
                     <input type='submit' />
                 </form>
             </main>
@@ -141,9 +144,4 @@ class ClassBookingForm extends Component {
     }
 }
 
-// const mapDispatchToProps = dispatch => ({
-//     userPostFetch: userInfo => dispatch(userPostFetch(userInfo))
-// })
-
-// export default connect(null, mapDispatchToProps)(Signup);
 export default ClassBookingForm;

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
 
 class ClassCard extends Component {
     render() {
@@ -13,6 +14,7 @@ class ClassCard extends Component {
                     <footer>
                         <ul className="actions">
                             <li><a href="#" className="button alt">Schedule</a></li>
+                            <li><Link to="/booking" className="button alt">Schedule</Link></li>
                         </ul>
                     </footer>
                 </section>
