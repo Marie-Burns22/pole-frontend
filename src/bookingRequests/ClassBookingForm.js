@@ -1,8 +1,4 @@
 import React, { Component } from 'react';
-// import { connect } from 'react-redux';
-import axios from "axios"
-import { tsExternalModuleReference } from '@babel/types';
-// import { userPostFetch } from '../redux/actions';
 
 class ClassBookingForm extends Component {
     constructor(props) {
@@ -34,7 +30,7 @@ class ClassBookingForm extends Component {
                 },
                 (error) => {
                     this.setState({
-                        isLoaded: tsExternalModuleReference,
+                        isLoaded: true,
                         error
                     });
                 }
