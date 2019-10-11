@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 // import { render } from "react-dom";
 // import { configureStore } from "redux-starter-kit";
 // import { Provider } from "react-redux";
-import store from './store.js'
+// import store from './store.js'
 import {BrowserRouter} from 'react-router-dom'
 
 import './index.css';
@@ -14,7 +14,7 @@ ReactDOM.render(
     // <Provider store={ store }>
         <BrowserRouter>
             <App />
-            </BrowserRouter>
+        </BrowserRouter>
     // </Provider>
     , 
     document.getElementById('root')
