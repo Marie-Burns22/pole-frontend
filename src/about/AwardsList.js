@@ -14,7 +14,8 @@ class AwardsList extends Component {
             credentials: "include",
             method: 'GET',
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "Accept": "application/json"
             },
         })
             .then(r => r.json())
@@ -32,7 +33,7 @@ class AwardsList extends Component {
             <div>
                 <ul>
                     {this.state.awards.map(a => (
-                    <li>{a.attributes.competition} - {a.attributes.year} - {a.attributes.award} </li>
+                    <li key={a.id}>{a.attributes.competition} - {a.attributes.year} - {a.attributes.award} </li>
                     ))}
                 </ul>
             </div>

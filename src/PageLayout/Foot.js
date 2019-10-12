@@ -40,9 +40,9 @@ class Foot extends Component {
                                     <h2>Find me on social media</h2>
                                 </header>
                                 <ul className="social">
-                                    <li><a className="icon brands fa-facebook-f" href="#"><span className="label">Facebook</span></a></li>
-                                    <li><a className="icon brands fa-twitter" href="#"><span className="label">Twitter</span></a></li>
-                                    <li><a className="icon brands fa-linkedin-in" href="#"><span className="label">LinkedIn</span></a></li>
+                                    <li><a className="icon brands fa-facebook-f" href="/"><span className="label">Facebook</span></a></li>
+                                    <li><a className="icon brands fa-twitter" href="/"><span className="label">Twitter</span></a></li>
+                                    <li><a className="icon brands fa-linkedin-in" href="/"><span className="label">LinkedIn</span></a></li>
                                 </ul>
                                 <ul className="contact">
                                     <li>
