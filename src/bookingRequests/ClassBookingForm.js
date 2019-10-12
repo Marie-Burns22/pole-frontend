@@ -113,7 +113,7 @@ class ClassBookingForm extends Component {
                 )
         } else if (!isLoaded) {
             return <div> Loading...</div>;
-        } else if (!this.state.timeSlots || this.state.timeSLots === undefined || this.state.timeSlots.length ===0) {
+        } else if (!timeSlots || timeSLots === undefined || timeSlots.length ===0) {
             return (
                 <section id="main">
                     <div className="container">
