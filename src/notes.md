@@ -5,9 +5,10 @@
 * Booking form updates time_slot status to "requested" when form is submitted
 * Booking form send email using formspree.
 * Fix About section styling
+* Connect article component to backend with fetch request in component did mount and then map through and pass as props to article cards.
 
 ### Working on
-* Connect article component to backend with fetch request in component did mount and then map through and pass as props to article cards.
+Connect service container component to backend with fetch request in componentdidMount. Map through courses and pass as props to service cards.
  
 
 
@@ -18,5 +19,6 @@
 * Add testimonial scaffold, admin resource, serializer, controller actions.
 * Add testimonial component.
 * Add photos
+* Add photo img url fields as strings to models: article, course,
 
 

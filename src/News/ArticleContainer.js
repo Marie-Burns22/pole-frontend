@@ -51,9 +51,9 @@ class ArticleContainer extends Component {
                 </section>
             )
         } else if (!isLoaded) {
-            return (<div> Loading...</div>)
+            return <div> Loading...</div>
         } else if (!articles || articles === undefined || articles.length === 0) {
-            return (<h2> Please check out the About page or Services since there is no news at this time.</h2>)
+            return <h2> Please check out the About page or Services since there is no news at this time.</h2>
         } else {
             return (
             <div>
