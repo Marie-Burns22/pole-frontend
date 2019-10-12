@@ -72,7 +72,7 @@ class ArticleContainer extends Component {
                                         <h2>What is Ms. Vegas up to?</h2>
                                     </header>
                                     <div className="row">
-                                        ({articleCards})
+                                        {articleCards}
                                     </div>
                                 </section>
 

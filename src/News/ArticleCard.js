@@ -8,10 +8,10 @@ class ArticleCard extends Component {
                     <section className="box">
                         <a href="#" className="image featured"><img src="images/pic08.jpg" alt="" /></a>
                         <header>
-                            <h3>Article Title</h3>
-                            <p>Date Posted</p>
+                            <h3>{this.props.article.title}</h3>
+                            <p>{this.props.article.published}</p>
                         </header>
-                        <p>Full Article Text</p>
+                        <p>{this.props.article.content}</p>
                         <footer>
                             <ul className="actions">
                                 <li><a href="#" className="button icon solid fa-file-alt">Share</a></li>
