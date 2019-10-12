@@ -67,7 +67,6 @@ class ClassBookingForm extends Component {
 
         // Change status from available to requested in API
         let id = this.state.timeSlotId
-        console.log("handle submit id:", id)
         fetch(`https://vmpole.herokuapp.com/api/v1/time_slots/${id}`, {
             credentials: "include",
             method: "PATCH",

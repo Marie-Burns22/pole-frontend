@@ -3,10 +3,11 @@
 ## 10/11/19
 ### Completed
 * Booking form updates time_slot status to "requested" when form is submitted
-*Booking form send email using formspree.
+* Booking form send email using formspree.
+* Fix About section styling
 
 ### Working on
-Fix About section styling
+* Connect article component to backend with fetch request in component did mount and then map through and pass as props to article cards.
  
 
 
