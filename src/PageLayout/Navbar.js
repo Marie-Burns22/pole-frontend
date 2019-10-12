@@ -4,7 +4,8 @@ import {NavLink} from "react-router-dom"
 class Navbar extends Component {
     render() {
         return (
-
+            <section id="header">
+                <h1><img className="full-logo" src="./images/Logo-Black-NoBackground.png" alt="" /></h1>
                 <nav id="nav">
                     <ul>
                         <li className="current"><NavLink to="/about" >Home</NavLink></li>
@@ -13,7 +14,7 @@ class Navbar extends Component {
                         <li><NavLink to="/news">News</NavLink></li>
                     </ul>
                 </nav>                
-
+            </section>
         )
     }
 }

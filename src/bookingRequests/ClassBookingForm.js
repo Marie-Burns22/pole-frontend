@@ -118,7 +118,7 @@ class ClassBookingForm extends Component {
             return (
                 <section id="main">
                     <div className="container">
-                        <h2 className="major"> I am so glad you would like to book a private session! Due to high-demand, all appointments are currently booked. Please email <a href="#">info@vegasinmiamipole.com</a> so we can create more availables time and ensure that they works for your schedule.</h2>
+                        <h2 className="major"> I am so glad you would like to book a private session! Due to high-demand, all appointments are currently booked. Please email info@vegasinmiamipole.com so we can create more availables time and ensure that they works for your schedule.</h2>
                     </div>
                 </section>
             )

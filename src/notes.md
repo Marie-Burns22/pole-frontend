@@ -1,9 +1,13 @@
 # Dev Log
 
 ## 10/11/19
-### Booking form updates backend to show time_slot requested.
-* Frontend: fetch request with patch method in booking form component. Send only time_slot id and status of requested
-* Backend time_slot controller update action for status. 
+### Completed
+* Booking form updates time_slot status to "requested" when form is submitted
+*Booking form send email using formspree.
+
+### Working on
+Fix About section styling
+ 
 
 
 

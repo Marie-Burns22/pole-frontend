@@ -4,7 +4,6 @@ import './assets/css/main.css'
 
 import Navbar from './PageLayout/Navbar';
 import Foot from './PageLayout/Foot';
-import Header from './PageLayout/Header';
 import AboutContainer from './about/AboutContainer';
 import ServiceContainer from './Services/ServiceContainer';
 import ArticleContainer from './News/ArticleContainer';
@@ -13,11 +12,7 @@ import ClassBookingForm from './bookingRequests/ClassBookingForm';
 function App() {
   return (
     <div>
-      <section id="header">
-        <Header />
-        <Navbar />
-      </section>
-     
+      <Navbar />
       <Switch>
         <Route exact path="/" component={AboutContainer} />
         <Route exact path="/about" component={AboutContainer} />
