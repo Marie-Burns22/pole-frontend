@@ -97,7 +97,7 @@ class ClassBookingForm extends Component {
 
     render() {
         const { status } = this.state;
-        const DATE_OPTIONS = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+        const DATE_OPTIONS = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric', timeZone: "UTC" };
         const { error, isLoaded, timeSlots } = this.state;
         if (error) {
             return (
@@ -168,7 +168,7 @@ class ClassBookingForm extends Component {
                                 <option selected>Select an available time</option>
                                 {timeSlots.map(t => 
                                 (
-                                    <option value={t.id} key={t.id}>{(new Date(t.attributes.date)).toLocaleDateString('en-US', DATE_OPTIONS)} at {t.attributes.time} {t.attributes.am_pm}</option>
+                                    <option value={t.id} key={t.id}>{(new Date(`${t.attributes.date} (EST)`).toDateString('en-US', DATE_OPTIONS))} at {t.attributes.time} {t.attributes.am_pm}</option>
                                 )) }
                             </select>
                         </div>
