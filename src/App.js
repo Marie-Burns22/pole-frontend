@@ -7,7 +7,7 @@ import Navbar from './PageLayout/Navbar';
 import Foot from './PageLayout/Foot';
 import AboutContainer from './about/AboutContainer';
 import ServiceContainer from './Services/ServiceContainer';
-import ArticleContainer from './News/ArticleContainer';
+import NewsContainer from './News/NewsContainer';
 import ClassBookingForm from './bookingRequests/ClassBookingForm';
 import EventBookingForm from './bookingRequests/EventBookingForm';
 
@@ -71,7 +71,7 @@ class App extends Component {
             <Route exact path="/" component={AboutContainer} />
             <Route exact path="/about" component={AboutContainer} />
             <Route exact path="/services" component={ServiceContainer} />
-            <Route exact path="/news" component={ArticleContainer} />
+            <Route exact path="/news" component={NewsContainer} />
             <Route exact path="/booking" component={ClassBookingForm} />
             <Route exact path="/infoForm" component={EventBookingForm} />
           </Switch>

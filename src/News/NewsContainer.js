@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ArticleCard from './ArticleCard'
 
-class ArticleContainer extends Component {
+class NewsContainer extends Component {
 
     constructor(props) {
         super(props);
@@ -57,19 +57,19 @@ class ArticleContainer extends Component {
         } else {
             return (
             <div>
-                <section id="banner">
+                {/* <section id="banner">
                     <header>
                         <h2>Ms. Vegas in the News</h2>
                         <p>Big. Bendy. Balanced.</p>
                     </header>
-                </section>
+                </section> */}
                 <section id="main">
                     <div className="container">
                         <div className="row">
                             <div className="col-12">
                                 <section>
                                     <header className="major">
-                                        <h2>What is Ms. Vegas up to?</h2>
+                                        <h2>News and Testimonials</h2>
                                     </header>
                                     <div className="row">
                                         {articleCards}
@@ -86,4 +86,4 @@ class ArticleContainer extends Component {
     }
 }
 
-export default ArticleContainer;
+export default NewsContainer;

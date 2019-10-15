@@ -6,7 +6,7 @@ class ArticleCard extends Component {
             <div>
                 <div className="col-6 col-12-small">
                     <section className="box">
-                        <a href="/" className="image featured"><img src="images/pic08.jpg" alt="" /></a>
+                        <a href="/" className="image featured"><img src={this.props.article.img} alt="Dancer" /></a>
                         <header>
                             <h3>{this.props.article.title}</h3>
                             <p>{this.props.article.published}</p>
