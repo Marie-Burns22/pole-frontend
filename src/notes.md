@@ -8,7 +8,13 @@
 * Connect article component to backend with fetch request in component did mount and then map through and pass as props to article cards.
 Connect service container component to backend with fetch request in componentdidMount. Map through courses and pass as props to service cards.
 
+## 10/15/19
+
 ### Working on
+* Add dropdown menu to navigation (either bootstrap or use example with dropotron)
+* Add second form
+* Add photos to project
+
  
 
 
