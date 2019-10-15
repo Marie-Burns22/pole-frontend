@@ -51,7 +51,7 @@ class App extends Component {
                 <span className="indent-2"></span>Service Descriptions
 						  </Link>
 
-              <Link to="bookings" className="link depth-2"
+              <Link to="/booking" className="link depth-2"
                 style={{ WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)' }}>
                 <span className="indent-2"></span>Book Private Sessions
 						  </Link>
