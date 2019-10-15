@@ -13,8 +13,8 @@ class ClassCard extends Component {
                     <p>{this.props.service.description}</p>
                     <footer>
                         <ul className="actions">
-                            {/* <li><a href="/booking" className="button alt">Schedule</a></li> */}
-                            <li><Link to="/booking" className="button alt">Schedule</Link></li>
+                           <span><li><Link exact to="/infoForm" className="button btn-sm icon solid center">Request Info</Link>
+                            <Link exact to="/booking" className="button btn-sm alt icon solid center">Book Private</Link></li></span>
                         </ul>
                     </footer>
                 </section>

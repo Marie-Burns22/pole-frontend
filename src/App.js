@@ -9,6 +9,7 @@ import AboutContainer from './about/AboutContainer';
 import ServiceContainer from './Services/ServiceContainer';
 import ArticleContainer from './News/ArticleContainer';
 import ClassBookingForm from './bookingRequests/ClassBookingForm';
+import EventBookingForm from './bookingRequests/EventBookingForm';
 
 class App extends Component {
   
@@ -72,6 +73,7 @@ class App extends Component {
             <Route exact path="/services" component={ServiceContainer} />
             <Route exact path="/news" component={ArticleContainer} />
             <Route exact path="/booking" component={ClassBookingForm} />
+            <Route exact path="/infoForm" component={EventBookingForm} />
           </Switch>
           <Foot />
         </div>
