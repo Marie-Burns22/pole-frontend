@@ -16,7 +16,7 @@ class EventBookingForm extends Component {
     }
 
         componentDidMount() {
-            fetch('https://vmpole.herokuapp.com/api/v1/services', {
+            fetch('https://vmpole.herokuapp.com/api/v1/courses', {
             credentials: "include",
             method: 'GET',
             headers: {
@@ -95,9 +95,8 @@ class EventBookingForm extends Component {
             return (
                 <section id="footer">
                     <div className="inner container">
-                    <h2 className="major">Book A Private Session</h2>
-                    <p>Use this form to book a private session. Ms. Vegas will reply with payment directions. Once the payment is processed your appointment will be reserved and confirmed.</p>
-                    <p> Please use the workshop and event booking form for those services</p>
+                    <h2 className="major">Request a Service:</h2>
+                    <p> Please use this form to request services. Include any specifics dates, events, or questions you have and Ms. Vegas will respond.</p>
                         <form onSubmit={this.handleSubmit} method="POST" action="https://formspree.io/mnerqevx">
                         <div className="fields">
                             <div className="field">
