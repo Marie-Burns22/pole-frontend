@@ -6,7 +6,7 @@ class ClassCard extends Component {
         return (
             <div className="col-4 col-6-medium col-12-small">
                 <section className="box">
-                    <a href="/booking" className="image featured"><img src="images/pic02.jpg" alt="" /></a>
+                    <a href="/booking" className="image featured"><img src={this.props.service.img} alt="Dancer" /></a>
                     <header>
                         <h3>{this.props.service.name}</h3>
                     </header>

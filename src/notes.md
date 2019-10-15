@@ -9,23 +9,22 @@
 Connect service container component to backend with fetch request in componentdidMount. Map through courses and pass as props to service cards.
 
 ## 10/15/19
+### Completed
+* Add form to request information about events and workshops
+* Update navbar to have have links for forms
+* Add photo to about page
 
 ### Working on
-* Add dropdown menu to navigation (either bootstrap or use example with dropotron)
-* Add second form
-* Add photos to project
+* Add 
+
 
  
 
 
 
 ## Todo
-* Duplicate and modify booking form for other services. This form will have drop down menu of services (not private sessions) instead of time_slots. Only goes to formspree, does not need to go to backend.
-*Style drop down menus so option fit correctly in menu space.
 * Add testimonial scaffold, admin resource, serializer, controller actions.
 * Add testimonial component.
-* Add photos
 * Add photo img url fields as strings to models: article, course
-*
 
 
