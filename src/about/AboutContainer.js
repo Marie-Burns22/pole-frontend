@@ -5,6 +5,7 @@ import { Link} from 'react-router-dom'
 class AboutContainer extends Component {
     render() {
         return (
+            <div id="page-wrapper">
             <section id="header">
                 <section id="banner">
                     <header>
@@ -72,6 +73,7 @@ class AboutContainer extends Component {
                     </div>
                 </section>
             </section>
+            </div>
         )
     }
 }
