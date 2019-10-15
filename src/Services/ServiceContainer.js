@@ -55,11 +55,11 @@ class ServiceContainer extends Component {
         } else {}
             return (
             <div>
-                <section id="banner">
+                {/* <section id="banner">
                     <header>
                         <h2>Services</h2>
                     </header>
-                </section>
+                </section> */}
                 <section id="main">
                     <div className="container">
                         <div className="row">

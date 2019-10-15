@@ -134,7 +134,7 @@ class EventBookingForm extends Component {
 
                             <div className="field">
                                 <label htmlFor="serviceId">Which service are you interested in?</label>
-                                <select onChange={this.handleChange} name='serviceId' placeholder="Available Services" value={this.state.serviceId}>
+                                    <select onChange={this.handleChange} name='serviceId' placeholder="Available Services" value={this.state.serviceId}>
                                     <option selected>Select a Service</option>
                                     {services.map(s => 
                                     (
@@ -142,6 +142,10 @@ class EventBookingForm extends Component {
                                     )) }
                                 </select>
                             </div>
+                                <div className="field">
+                                    <label htmlFor="message">Message</label>
+                                    <textarea className="message" id="message" rows="4"></textarea>
+                                </div>
 
                         </div>
                             {status === "SUCCESS" 

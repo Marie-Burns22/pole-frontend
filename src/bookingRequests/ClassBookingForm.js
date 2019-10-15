@@ -126,8 +126,9 @@ class ClassBookingForm extends Component {
                 <section id="footer">
                     <div className="inner container">
                     <h2 className="major">Book A Private Session</h2>
-                    <p>Use this form to book a private session. Ms. Vegas will reply with payment directions. Once the payment is processed your appointment will be reserved and confirmed.</p>
-                    <p> Please use the workshop and event booking form for those services</p>
+                    <br />
+                    <p> Ready to book? Use the form below to schedule your private session. Ms. Vegas will reply with payment directions. Once the payment is processed your appointment will be reserved and confirmed.</p>
+                        <p> Don't see a time that works for you? Email info@vegasinmiamipole.com and Ms. Vegas will work with you to find a time. </p>
                         <form onSubmit={this.handleSubmit} method="POST" action="https://formspree.io/mogkngpm">
                         <div className="fields">
                             <div className="field">
@@ -173,6 +174,11 @@ class ClassBookingForm extends Component {
                                     )) }
                                 </select>
                             </div>
+
+                                <div className="field">
+                                    <label htmlFor="message">Message</label>
+                                    <textarea className="message" id="message" rows="4"></textarea>
+                                </div>
 
                         </div>
                             {status === "SUCCESS" 
