@@ -1,18 +1,19 @@
 import React, { Component } from 'react'
 import AwardsList from './AwardsList'
-import { Link} from 'react-router-dom'
+import { Link, withRouter} from 'react-router-dom'
 
 class AboutContainer extends Component {
     render() {
         return (
-            // <div id="page-wrapper">
-            <section id="header">
+            <div id="page-wrapper">
                 <section id="banner">
                     <header>
                         <h2>About Ms. Vegas</h2>
                         <p>Big. Bendy. Balanced.</p>
                     </header>
                 </section>
+                
+            <section id="header">
                 <section id="intro" className="container">
                     <div className="row">
                         <div className="col-6 col-12-medium">
@@ -42,8 +43,9 @@ class AboutContainer extends Component {
                                 </header>
                                 <p>Ms. Vegas offers quality, affordable and customized individual instruction. Whether you're near or far, you can take advantage of the training she offers online and in person. Push your flexibility to the next level, work on building and perfecting your routines, discover creative floor work or perfect pole moves - Ms. Vegas is happy to help you wherever you are in your fitness journey.
                                 With every lesson comes the Ms. Vegas guarantee to focus on you and your growth! You will not be disappointed in her energy, attention to the client, customization, and the fun and effective workouts she trains.</p>
+                                <br/>
                                 <ul className="actions">
-                                    <li><Link to="/services">Learn More</Link></li>
+                                    <li><Link className="button btn-sm icon solid center" exact to="/services">Learn More</Link></li>
                                 </ul>
                             </section>
                         </div>
@@ -53,9 +55,10 @@ class AboutContainer extends Component {
                                 <header>
                                     <h2>Event Hosting and Peformances</h2>
                                 </header>
-                                <p>Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>
+                                <p>Need an engaging and enthusiastic MC for your next event? Ms. Vegas brings extensive experience on stages across the world. She is engaging, hilarious and energetic.</p>
+                                <br/>
                                 <ul className="actions">
-                                    <li><Link to="/services">Learn More</Link></li>
+                                    <li><Link className="button btn-sm icon solid center" exact to="/services">Learn More</Link></li>
                                 </ul>
                             </section>
                         </div>
@@ -63,11 +66,12 @@ class AboutContainer extends Component {
                             <section className="last">
                                 <i className="icon solid featured alt2 fa-star"></i>
                                 <header>
-                                    <h2>News and Events</h2>
+                                    <h2>News and Testimonials</h2>
                                 </header>
-                                <p>Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>
+                                <p>Find out about events and performances. Read testimonials from clients.</p>
+                                <br/>
                                 <ul className="actions">
-                                    <li><Link to="/news">News</Link></li>
+                                    <li><Link className="button btn-sm icon solid center" exact to="/news">Read More</Link></li>
                                 </ul>
                             </section>
                         </div>
