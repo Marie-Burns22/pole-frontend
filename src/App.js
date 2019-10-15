@@ -37,19 +37,19 @@ class App extends Component {
                 <span className="indent-0"></span>Home
 						  </Link>
 
-              <Link to="about" className="link depth-1"
+              <Link to="/about" className="link depth-1"
                 style={{ WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)' }}>
                 <span className="indent-1"></span>About
 						  </Link>
 
-              <Link to="services" className="link depth-1"
+              <Link to="/services" className="link depth-1"
                 style={{ WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)' }}>
                 <span className="indent-1"></span>Services
 						  </Link>
 
-              <Link to="services" className="link depth-2"
+              <Link to="/infoForm" className="link depth-2"
                 style={{ WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)' }}>
-                <span className="indent-2"></span>Service Descriptions
+                <span className="indent-2"></span>Request Services
 						  </Link>
 
               <Link to="/booking" className="link depth-2"
@@ -57,7 +57,7 @@ class App extends Component {
                 <span className="indent-2"></span>Book Private Sessions
 						  </Link>
 
-              <Link to="news" className="link depth-1"
+              <Link to="/news" className="link depth-1"
                 style={{ WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)' }}>
                 <span className="indent-1"></span>News
 						  </Link>

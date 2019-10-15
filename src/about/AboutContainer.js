@@ -5,7 +5,7 @@ import { Link} from 'react-router-dom'
 class AboutContainer extends Component {
     render() {
         return (
-            <div id="page-wrapper">
+            // <div id="page-wrapper">
             <section id="header">
                 <section id="banner">
                     <header>
@@ -21,6 +21,7 @@ class AboutContainer extends Component {
                                     <h2>Who is Ms. Vegas?</h2>
                                 </header>
                                 <p>Ms. Vegas is a seasoned poleformer who has made appearances in a variety of competitions and showcases for nearly a decade. Known for her dynamic stage presence and extreme flexibility, Ms. Vegas' signature backbend tricks have captivated audiences for years. From the stages of Polecon, USPDF and PSO to the television set on NBC's America's Got Talent - Ms. Vegas is proud to offer her years of experience to educate others. Her talent as a performer make her style distinct and her career in education gives her the skills to be a thoughtful and engaging instructor. She has been choreographing and competitively successful for many years and is excited to share her passion with other dancers.</p>
+                                    <p><img className="image featured" src="/images/SEPC_00019_resized.jpg"></img></p>
                             </section>
                         </div>
                         <div className="col-6 col-12-medium">
@@ -73,7 +74,7 @@ class AboutContainer extends Component {
                     </div>
                 </section>
             </section>
-            </div>
+            // </div>
         )
     }
 }

@@ -12,12 +12,12 @@ class ArticleCard extends Component {
                             <p>{this.props.article.published}</p>
                         </header>
                         <p>{this.props.article.content}</p>
-                        <footer>
+                        {/* <footer>
                             <ul className="actions">
                                 <li><a href="/" className="button icon solid fa-file-alt">Share</a></li>
                                 <li><a href="/" className="button alt icon solid fa-comment">Comments</a></li>
                             </ul>
-                        </footer>
+                        </footer> */}
                     </section>
                 </div>
             </div>

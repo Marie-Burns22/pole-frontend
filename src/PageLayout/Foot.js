@@ -6,38 +6,14 @@ class Foot extends Component {
             <section id="footer">
                 <div className="container">
                     <div className="row">
-                        <div className="col-8 col-12-medium">
-                            <header>
-                                <h2>Testimonials</h2>
-                            </header>
-                        </div>
                         <div className="col-4 col-12-medium">
                             <img className="image featured" src="images/Logo-White-NoBackground.png" alt="" />
                         </div>
-                        <div className="col-4 col-6-medium col-12-small">
-                            <section>
-                                <header>
-                                    <h2>Videos?</h2>
-                                </header>
-                                <ul className="divided">
-                                    <li>Maybe link some videos here if they won't fit on the about page.</li>
-                                </ul>
-                            </section>
-                        </div>
-                        <div className="col-4 col-6-medium col-12-small">
-                            <section>
-                                <header>
-                                    <h2>Testimonials</h2>
-                                </header>
-                                <ul className="divided">
-                                    <li>Testimonials could be listed here or above and this section removed.</li>
-                                </ul>
-                            </section>
-                        </div>
+                       
                         <div className="col-4 col-12-medium">
                             <section>
                                 <header>
-                                    <h2>Find me on social media</h2>
+                                    <h3>Find me on social media</h3>
                                 </header>
                                 <ul className="social">
                                     <li><a className="icon brands fa-facebook-f" href="/"><span className="label">Facebook</span></a></li>
