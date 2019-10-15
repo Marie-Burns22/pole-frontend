@@ -123,68 +123,70 @@ class ClassBookingForm extends Component {
             )
         } else {
             return (
-                <section id="main">
-                <h2 className="major">Book A Private Session</h2>
-                <p>Use this form to book a private session. Ms. Vegas will reply with payment directions. Once the payment is processed your appointment will be reserved and confirmed.</p>
-                <p> Please use the workshop and event booking form for those services</p>
-                    <form onSubmit={this.handleSubmit} method="POST" action="https://formspree.io/mogkngpm">
-                    <div className="fields">
-                        <div className="field">
-                            <label htmlFor="firstName">First Name</label>
-                            <input type="text"
-                                name='firstName'
-                                placeholder='First Name'
-                                id="firstName"
-                                value={this.state.firstName}
-                                onChange={this.handleChange}
-                            />
-                        </div>
+                <section id="footer">
+                    <div className="inner container">
+                    <h2 className="major">Book A Private Session</h2>
+                    <p>Use this form to book a private session. Ms. Vegas will reply with payment directions. Once the payment is processed your appointment will be reserved and confirmed.</p>
+                    <p> Please use the workshop and event booking form for those services</p>
+                        <form onSubmit={this.handleSubmit} method="POST" action="https://formspree.io/mogkngpm">
+                        <div className="fields">
+                            <div className="field">
+                                <label htmlFor="firstName">First Name</label>
+                                <input type="text"
+                                    name='firstName'
+                                    placeholder='First Name'
+                                    id="firstName"
+                                    value={this.state.firstName}
+                                    onChange={this.handleChange}
+                                />
+                            </div>
 
-                        <div className="field">
-                            <label htmlFor="lastName">Last Name</label>
-                            <input type="text"
-                                name='lastName'
-                                placeholder='Last Name'
-                                id="lastName"
-                                value={this.state.lastName}
-                                onChange={this.handleChange}
-                            />
-                        </div>
+                            <div className="field">
+                                <label htmlFor="lastName">Last Name</label>
+                                <input type="text"
+                                    name='lastName'
+                                    placeholder='Last Name'
+                                    id="lastName"
+                                    value={this.state.lastName}
+                                    onChange={this.handleChange}
+                                />
+                            </div>
 
-                        <div className="field">
-                            <label htmlFor="email">Email</label>
-                            <input type="email"
-                                name='email'
-                                placeholder='Email'
-                                id="email"
-                                value={this.state.email}
-                                onChange={this.handleChange}
-                            />
-                        </div>
+                            <div className="field">
+                                <label htmlFor="email">Email</label>
+                                <input type="email"
+                                    name='email'
+                                    placeholder='Email'
+                                    id="email"
+                                    value={this.state.email}
+                                    onChange={this.handleChange}
+                                />
+                            </div>
 
-                        <div className="field">
-                            <label htmlFor="timeSlotId">Choose an avaliable time:</label>
-                            <select onChange={this.handleChange} name='timeSlotId' placeholder="Date and Time" value={this.state.timeSlotId}>
-                                <option selected>Select an available time</option>
-                                {timeSlots.map(t => 
-                                (
-                                    <option value={t.id} key={t.id}>{(new Date(`${t.attributes.date} (EST)`).toDateString('en-US', DATE_OPTIONS))} at {t.attributes.time} {t.attributes.am_pm}</option>
-                                )) }
-                            </select>
-                        </div>
+                            <div className="field">
+                                <label htmlFor="timeSlotId">Choose an avaliable time:</label>
+                                <select onChange={this.handleChange} name='timeSlotId' placeholder="Date and Time" value={this.state.timeSlotId}>
+                                    <option selected>Select an available time</option>
+                                    {timeSlots.map(t => 
+                                    (
+                                        <option value={t.id} key={t.id}>{(new Date(`${t.attributes.date} (EST)`).toDateString('en-US', DATE_OPTIONS))} at {t.attributes.time} {t.attributes.am_pm}</option>
+                                    )) }
+                                </select>
+                            </div>
 
-                    </div>
-                        {status === "SUCCESS" 
-                        ? 
-                        <p>Thanks!</p> 
-                        : 
-                        // <button>Submit</button>
-                        <ul className="actions">
-                            <li><input type='submit' value="Send Message" /></li>
-                        </ul>
-                        }
-                        {status === "ERROR" && <p>Ooops! There was an error.</p>}
-                </form>
+                        </div>
+                            {status === "SUCCESS" 
+                            ? 
+                            <p>Thanks!</p> 
+                            : 
+                            // <button>Submit</button>
+                            <ul className="actions">
+                                <li><input type='submit' value="Send Message" /></li>
+                            </ul>
+                            }
+                            {status === "ERROR" && <p>Ooops! There was an error.</p>}
+                    </form>
+                </div>
             </section>
             )
         }
