@@ -11,6 +11,8 @@ import NewsContainer from './News/NewsContainer';
 import ClassBookingForm from './bookingRequests/ClassBookingForm';
 import EventBookingForm from './bookingRequests/EventBookingForm';
 
+import { Layout } from './navComponents/Layout'
+
 class App extends Component {
   
   constructor(props) {
@@ -67,7 +69,8 @@ class App extends Component {
           </div>
           <div id="page-wrapper">
           <Navbar />
-          {/* <Switch> */}
+          <Layout>
+          <Switch>
             <Route exact path="/" component={AboutContainer} />
             <Route exact path="/about" component={AboutContainer} />
             <Route exact path="/services" component={ServiceContainer} />
@@ -75,7 +78,8 @@ class App extends Component {
             <Route exact path="/booking" component={ClassBookingForm} />
             <Route exact path="/infoForm" component={EventBookingForm} />
             {/* <Route render={() => <About />} /> */}
-          {/* </Switch> */}
+          </Switch>
+            </Layout>
           <Foot />
         </div>
         </div>
