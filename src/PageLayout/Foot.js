@@ -13,7 +13,7 @@ class Foot extends Component {
                         <div className="col-4 col-12-medium">
                             <section>
                                 <header>
-                                    <h3>Find me on social media</h3>
+                                    <h3>Follow Ms. Vegas on social media</h3>
                                 </header>
                                 <ul className="social">
                                     <li><a className="icon brands fa-facebook-f" href="/"><span className="label">Facebook</span></a></li>

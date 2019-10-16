@@ -19,7 +19,7 @@ class Navbar extends Component {
                 <nav id="nav">
                     <ul>
                         {/* <li className="current"><NavLink to="/" >Home</NavLink></li> */}
-                        <li><NavLink activeClassName="current" exact to="/">About</NavLink></li>
+                        <li><NavLink activeClassName="current" exact to="/about">About</NavLink></li>
                         <li><NavLink activeClassName="current" exact to="/services">Services</NavLink></li>
                         <li><NavLink activeClassName="current" exact to="/booking">Book Private Session</NavLink></li>
                         <li><NavLink activeClassName="current" exact to="/infoForm">Request Services</NavLink></li>

@@ -33,31 +33,37 @@ class App extends Component {
           <div id="navPanel">
             <nav>
               <Link to="/" className="link depth-0"
+                onClick={this.toggleSidebarVisibility}
                 style={{ WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)' }}>
                 <span className="indent-0"></span>Home
 						  </Link>
 
               <Link to="/about" className="link depth-1"
+                onClick={this.toggleSidebarVisibility}
                 style={{ WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)' }}>
                 <span className="indent-1"></span>About
 						  </Link>
 
               <Link to="/services" className="link depth-1"
+                onClick={this.toggleSidebarVisibility}
                 style={{ WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)' }}>
                 <span className="indent-1"></span>Services
 						  </Link>
 
               <Link to="/infoForm" className="link depth-2"
+                onClick={this.toggleSidebarVisibility}
                 style={{ WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)' }}>
                 <span className="indent-2"></span>Request Services
 						  </Link>
 
               <Link to="/booking" className="link depth-2"
+                onClick={this.toggleSidebarVisibility}
                 style={{ WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)' }}>
                 <span className="indent-2"></span>Book Private Sessions
 						  </Link>
 
               <Link to="/news" className="link depth-1"
+                onClick={this.toggleSidebarVisibility}
                 style={{ WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)' }}>
                 <span className="indent-1"></span>News
 						  </Link>
