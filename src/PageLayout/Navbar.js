@@ -18,12 +18,12 @@ class Navbar extends Component {
                 {/* navbar */}
                 <nav id="nav">
                     <ul>
-                        <li className="current"><NavLink to="/" >Home</NavLink></li>
+                        {/* <li className="current"><NavLink to="/" >Home</NavLink></li> */}
                         <li><NavLink exact to="/">About</NavLink></li>
                         <li><NavLink exact to="/services">Services</NavLink></li>
                         <li><NavLink exact to="/booking">Book Private Session</NavLink></li>
                         <li><NavLink exact to="/infoForm">Request Services</NavLink></li>
-                        <li><NavLink exact to="/news">News</NavLink></li>
+                        <li><NavLink exact to="/news">News and Testimonials</NavLink></li>
                     </ul>
                 </nav>                
             </section>
