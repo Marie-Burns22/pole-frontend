@@ -15,11 +15,12 @@ Connect service container component to backend with fetch request in componentdi
 * Add photo to about page
 * Add img field to active admin backend api. Use props and img src from api request to render images for each service and class card.
 * Add testimonial model added active admin backend api
+* Duplicate article card and use to create testimonial card. Style card for quotes.
+* Api call in component did mount in NewsContainer for testimonials
+* Render testimonial cards in NewsContainer
+
 
 ### Working on
-* Duplicate article card and use to create testimonial card. 
-* Api call in component did mount in NewsContainer
-* Render testimonial cards in NewsContainer
 
 
  
@@ -29,5 +30,6 @@ Connect service container component to backend with fetch request in componentdi
 ## Todo
 * Add testimonial scaffold, admin resource, serializer, controller actions.
 * Add testimonial component.
+* Fix routes. Right now a reload or typing in the url throws and error.
 
 
