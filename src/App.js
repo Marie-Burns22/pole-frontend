@@ -66,7 +66,7 @@ class App extends Component {
           <div id="page-wrapper">
             <Navbar />
 
-            <Switch>
+            {/* <Switch> */}
               <Route exact path="/" component={AboutContainer} />
               <Route exact path="/about" component={AboutContainer} />
               <Route exact path="/services" component={ServiceContainer} />
@@ -74,7 +74,7 @@ class App extends Component {
               <Route exact path="/booking" component={ClassBookingForm} />
               <Route exact path="/infoForm" component={EventBookingForm} />
               <Route render={() => <AboutContainer />} />
-            </Switch>ß
+            {/* </Switch> */}
             <Foot />
         </div>
         </div>
