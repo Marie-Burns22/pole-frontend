@@ -13,9 +13,13 @@ Connect service container component to backend with fetch request in componentdi
 * Add form to request information about events and workshops
 * Update navbar to have have links for forms
 * Add photo to about page
+* Add img field to active admin backend api. Use props and img src from api request to render images for each service and class card.
+* Add testimonial model added active admin backend api
 
 ### Working on
-* Add 
+* Duplicate article card and use to create testimonial card. 
+* Api call in component did mount in NewsContainer
+* Render testimonial cards in NewsContainer
 
 
  
@@ -25,6 +29,5 @@ Connect service container component to backend with fetch request in componentdi
 ## Todo
 * Add testimonial scaffold, admin resource, serializer, controller actions.
 * Add testimonial component.
-* Add photo img url fields as strings to models: article, course
 
 

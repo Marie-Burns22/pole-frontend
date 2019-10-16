@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
 import ArticleCard from './ArticleCard'
+import TestimonialCard from './TestimonialCard';
 
 class NewsContainer extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            isLoaded: false,
-            articles: []
+            articlesLoaded: false,
+            articles: [],
+            testimonialsLoaded:false,
+            testimonials: []
         }
     }
 
@@ -24,23 +27,50 @@ class NewsContainer extends Component {
         .then(
             (result) => {
                 this.setState({
-                    isLoaded: true,
+                    articlesLoaded: true,
                     articles: result.data
                 });
             },
             (error) => {
                 this.setState({
-                    isLoaded: true,
+                    articlesLoaded: true,
                     error
                 });
             }
         )
+
+        fetch('https://vmpole.herokuapp.com/api/v1/testimonials', {
+            credentials: "include",
+            method: 'GET',
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            }
+        })
+            .then(response => response.json())
+            .then(
+                (result) => {
+                    this.setState({
+                        testimonialsLoaded: true,
+                        testimonials: result.data
+                    });
+                },
+                (error) => {
+                    this.setState({
+                        testimonialsLoaded: true,
+                        error
+                    });
+                }
+            )
     }
 
     render() {
-        const { error, isLoaded, articles } = this.state;
+        const { error, testimonailsLoaded, articlesLoaded, articles, testimonials } = this.state;
         const articleCards = articles.map(a => (
             <ArticleCard key={a.id} article={a.attributes} id={a.id} />
+        ))
+        const testimonialCards = testimonials.map(t => (
+            <TestimonialCard key={t.id} testimonial={t.attributes} id={t.id} />
         ))
         if (error) {
             return (
@@ -50,36 +80,47 @@ class NewsContainer extends Component {
                     </header>
                 </section>
             )
-        } else if (!isLoaded) {
+        } else if (!articlesLoaded) {
             return <div> Loading...</div>
         } else if (!articles || articles === undefined || articles.length === 0) {
             return <h2> Please check out the About page or Services since there is no news at this time.</h2>
         } else {
             return (
             <div>
-                {/* <section id="banner">
-                    <header>
-                        <h2>Ms. Vegas in the News</h2>
-                        <p>Big. Bendy. Balanced.</p>
-                    </header>
-                </section> */}
                 <section id="main">
                     <div className="container">
                         <div className="row">
                             <div className="col-12">
                                 <section>
                                     <header className="major">
-                                        <h2>News and Testimonials</h2>
+                                        <h2>News</h2>
                                     </header>
                                     <div className="row">
                                         {articleCards}
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* <section id="main"> */}
+                    <div className="container">        
+                        <div className="row">
+                            <div className="col-12">
+                                <section>
+                                    <header className="major">
+                                        <h2>Testimonials</h2>
+                                    </header>
+                                    <div className="row">
+                                        {testimonialCards}
                                     </div>
                                 </section>
 
                             </div>
                         </div>
                     </div>                            
-                </section>
+                {/* </section> */}
             </div>
             )
         }
