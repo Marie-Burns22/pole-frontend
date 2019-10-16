@@ -11,8 +11,6 @@ import NewsContainer from './News/NewsContainer';
 import ClassBookingForm from './bookingRequests/ClassBookingForm';
 import EventBookingForm from './bookingRequests/EventBookingForm';
 
-import { Layout } from './navComponents/Layout'
-
 class App extends Component {
   
   constructor(props) {
@@ -63,24 +61,21 @@ class App extends Component {
                 style={{ WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)' }}>
                 <span className="indent-1"></span>News
 						  </Link>
-
-
             </nav>
           </div>
           <div id="page-wrapper">
-          <Navbar />
-          <Layout>
-          <Switch>
-            <Route exact path="/" component={AboutContainer} />
-            <Route exact path="/about" component={AboutContainer} />
-            <Route exact path="/services" component={ServiceContainer} />
-            <Route exact path="/news" component={NewsContainer} />
-            <Route exact path="/booking" component={ClassBookingForm} />
-            <Route exact path="/infoForm" component={EventBookingForm} />
-            {/* <Route render={() => <About />} /> */}
-          </Switch>
-            </Layout>
-          <Foot />
+            <Navbar />
+
+            <Switch>
+              <Route exact path="/" component={AboutContainer} />
+              <Route exact path="/about" component={AboutContainer} />
+              <Route exact path="/services" component={ServiceContainer} />
+              <Route exact path="/news" component={NewsContainer} />
+              <Route exact path="/booking" component={ClassBookingForm} />
+              <Route exact path="/infoForm" component={EventBookingForm} />
+              <Route render={() => <AboutContainer />} />
+            </Switch>ß
+            <Foot />
         </div>
         </div>
       );

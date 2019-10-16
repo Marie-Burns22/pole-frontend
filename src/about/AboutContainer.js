@@ -83,4 +83,4 @@ class AboutContainer extends Component {
     }
 }
 
-export default AboutContainer;
+export default withRouter(AboutContainer);
