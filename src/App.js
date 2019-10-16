@@ -74,6 +74,7 @@ class App extends Component {
             <Route exact path="/news" component={NewsContainer} />
             <Route exact path="/booking" component={ClassBookingForm} />
             <Route exact path="/infoForm" component={EventBookingForm} />
+            <Route render={() => <About />} />
           </Switch>
           <Foot />
         </div>
