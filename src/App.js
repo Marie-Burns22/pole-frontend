@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import {Route, Switch, Link, withRouter } from 'react-router-dom'
+import {Route, Switch, Link, withRouter, Redirect } from 'react-router-dom'
 import './assets/css/main.css'
 
 import Navbar from './PageLayout/Navbar';
@@ -66,15 +66,15 @@ class App extends Component {
           <div id="page-wrapper">
             <Navbar />
 
-            {/* <Switch> */}
+            <Switch>
               <Route exact path="/" component={AboutContainer} />
-              <Route exact path="/about" component={AboutContainer} />
-              <Route exact path="/services" component={ServiceContainer} />
-              <Route exact path="/news" component={NewsContainer} />
-              <Route exact path="/booking" component={ClassBookingForm} />
-              <Route exact path="/infoForm" component={EventBookingForm} />
-              <Route render={() => <AboutContainer />} />
-            {/* </Switch> */}
+              <Route path="/about" component={AboutContainer} />
+              <Route path="/services" component={ServiceContainer} />
+              <Route path="/news" component={NewsContainer} />
+              <Route path="/booking" component={ClassBookingForm} />
+              <Route path="/infoForm" component={EventBookingForm} />
+              <Route path="*"><Redirect to="/about" /></Route>
+            </Switch>
             <Foot />
         </div>
         </div>

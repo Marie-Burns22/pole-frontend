@@ -2136,6 +2136,11 @@ input, select, textarea {
 					color: #fff !important;
 					font-weight: 700;
 				}
+				a.current {
+					background: #d52349;
+					color: #fff !important;
+					font-weight: 700;
+				}
 
 	.dropotron {
 		border-radius: 5px;
