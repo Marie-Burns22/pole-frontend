@@ -122,6 +122,13 @@ class ClassBookingForm extends Component {
                 </section>
             )
         } else {
+            const minutes = (min) => {
+                if (min === 0 || min === null) {
+                    return "00"
+                } else {
+                    return min
+                }
+            }
             return (
                 <section id="footer">
                     <div className="inner container">
@@ -170,7 +177,7 @@ class ClassBookingForm extends Component {
                                     <option selected>Select an available time</option>
                                     {timeSlots.map(t => 
                                     (
-                                        <option value={t.id} key={t.id}>{(new Date(`${t.attributes.date} (EST)`).toDateString('en-US', DATE_OPTIONS))} at {t.attributes.time}:{t.attributes.min} {t.attributes.am_pm}</option>
+                                        <option value={t.id} key={t.id}>{(new Date(`${t.attributes.date} (EST)`).toDateString('en-US', DATE_OPTIONS))} at {t.attributes.time}:{minutes(t.attributes.min)} {t.attributes.am_pm}</option>
                                     )) }
                                 </select>
                             </div>
