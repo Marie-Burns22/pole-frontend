@@ -3,7 +3,45 @@ import AwardsList from './AwardsList'
 import { Link, withRouter} from 'react-router-dom'
 
 class AboutContainer extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            isLoaded: false,
+            blurbs: []
+        }
+    }
+
+    componentDidMount() {
+        fetch('https://vmpole.herokuapp.com/api/v1/blurbs', {
+            credentials: "include",
+            method: 'GET',
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            }
+        })
+            .then(response => response.json())
+            .then(
+                (result) => {
+                    this.setState({
+                        isLoaded: true,
+                        blurbs: result.data
+                    });
+                },
+                (error) => {
+                    this.setState({
+                        isLoaded: true,
+                        error
+                    });
+                }
+            )
+    }
+
+
     render() {
+        const {blurbs} = this.state
+        const about = blurbs.find(blurb => blurb.id === 1 )
         return (
             <div id="page-wrapper">
                 <section id="banner">
@@ -19,9 +57,10 @@ class AboutContainer extends Component {
                         <div className="col-6 col-12-medium">
                             <section className="first">
                                 <header>
-                                    <h2>Who is Ms. Vegas?</h2>
+                                    <h2>{about.title}</h2>
                                 </header>
-                                <p>Ms. Vegas is a seasoned poleformer who has made appearances in a variety of competitions and showcases for nearly a decade. Known for her dynamic stage presence and extreme flexibility, Ms. Vegas' signature backbend tricks have captivated audiences for years. From the stages of Polecon, USPDF and PSO to the television set on NBC's America's Got Talent - Ms. Vegas is proud to offer her years of experience to educate others. Her talent as a performer make her style distinct and her career in education gives her the skills to be a thoughtful and engaging instructor. She has been choreographing and competitively successful for many years and is excited to share her passion with other dancers.</p>
+                                {/* <p>Ms. Vegas is a seasoned poleformer who has made appearances in a variety of competitions and showcases for nearly a decade. Known for her dynamic stage presence and extreme flexibility, Ms. Vegas' signature backbend tricks have captivated audiences for years. From the stages of Polecon, USPDF and PSO to the television set on NBC's America's Got Talent - Ms. Vegas is proud to offer her years of experience to educate others. Her talent as a performer make her style distinct and her career in education gives her the skills to be a thoughtful and engaging instructor. She has been choreographing and competitively successful for many years and is excited to share her passion with other dancers.</p> */}
+                                <p>{about.content}</p>
                                     <p><img className="image featured" src="/images/SEPC_00019_resized.jpg"></img></p>
                             </section>
                         </div>
