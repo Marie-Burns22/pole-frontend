@@ -170,7 +170,7 @@ class ClassBookingForm extends Component {
                                     <option selected>Select an available time</option>
                                     {timeSlots.map(t => 
                                     (
-                                        <option value={t.id} key={t.id}>{(new Date(`${t.attributes.date} (EST)`).toDateString('en-US', DATE_OPTIONS))} at {t.attributes.time} {t.attributes.am_pm}</option>
+                                        <option value={t.id} key={t.id}>{(new Date(`${t.attributes.date} (EST)`).toDateString('en-US', DATE_OPTIONS))} at {t.attributes.time}:{t.attributes.min} {t.attributes.am_pm}</option>
                                     )) }
                                 </select>
                             </div>
