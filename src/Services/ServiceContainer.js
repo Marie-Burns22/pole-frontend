@@ -14,7 +14,7 @@ class ServiceContainer extends Component {
 
     componentDidMount() {
         fetch('https://vmpole.herokuapp.com/api/v1/courses', {
-            credentials: "include",
+            // credentials: "include",
             method: 'GET',
             headers: {
                 "Content-Type": "application/json",
@@ -52,7 +52,7 @@ class ServiceContainer extends Component {
             return <div>Loading....</div>
         } else if (!services || services === undefined || services.length === 0) {
             return <h2>There are no services descriptions currently available online. Please email info@vegasinmiamipole.com for more information.</h2>
-        } else {}
+        } else {
             return (
             <div>
                 {/* <section id="banner">
@@ -77,8 +77,9 @@ class ServiceContainer extends Component {
 
                 </section>
             </div>
-        )
-    }
+            )
+        }
+    }  
 }
 
 export default ServiceContainer;

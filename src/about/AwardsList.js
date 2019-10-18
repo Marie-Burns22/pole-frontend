@@ -11,7 +11,7 @@ class AwardsList extends Component {
 
     componentDidMount() {
         fetch('https://vmpole.herokuapp.com/api/v1/awards', {
-            credentials: "include",
+            // credentials: "include",
             method: 'GET',
             headers: {
                 "Content-Type": "application/json",
