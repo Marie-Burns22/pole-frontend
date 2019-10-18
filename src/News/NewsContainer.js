@@ -65,7 +65,7 @@ class NewsContainer extends Component {
     }
 
     render() {
-        const { error, testimonailsLoaded, articlesLoaded, articles, testimonials } = this.state;
+        const { error, articlesLoaded, articles, testimonials } = this.state;
         const articleCards = articles.map(a => (
             <ArticleCard key={a.id} article={a.attributes} id={a.id} />
         ))

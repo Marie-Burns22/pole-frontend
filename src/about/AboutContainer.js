@@ -76,7 +76,7 @@ class AboutContainer extends Component {
                                     <h2>{about.title}</h2>
                                 </header>
                                 <p>{about.content}</p>
-                                    <p><img className="image featured" src={about.img}></img></p>
+                                    <p><img className="image featured" src={about.img} alt="dancer"></img></p>
                             </section>
                         </div>
                         <div className="col-6 col-12-medium">
@@ -98,7 +98,7 @@ class AboutContainer extends Component {
                                 <p>{services.content}</p>
                                 <br/>
                                 <ul className="actions">
-                                    <li><Link className="button btn-sm icon solid center" exact to="/services">Learn More</Link></li>
+                                    <li><Link className="button btn-sm icon solid center" to="/services">Learn More</Link></li>
                                 </ul>
                             </section>
                         </div>
@@ -111,7 +111,7 @@ class AboutContainer extends Component {
                                 <p>{events.content}</p>
                                 <br/>
                                 <ul className="actions">
-                                    <li><Link className="button btn-sm icon solid center" exact to="/services">Learn More</Link></li>
+                                    <li><Link className="button btn-sm icon solid center" to="/services">Learn More</Link></li>
                                 </ul>
                             </section>
                         </div>
@@ -124,7 +124,7 @@ class AboutContainer extends Component {
                                 <p>{news.content}</p>
                                 <br/>
                                 <ul className="actions">
-                                    <li><Link className="button btn-sm icon solid center" exact to="/news">Read More</Link></li>
+                                    <li><Link className="button btn-sm icon solid center" to="/news">Read More</Link></li>
                                 </ul>
                             </section>
                         </div>

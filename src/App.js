@@ -27,7 +27,9 @@ class App extends Component {
         <div id="body" className={this.state.sidebarVisible ? 'homepage navPanel-visible' : ''}>
 
           <div id="titleBar">
-            <a href="#navPanel" onClick={this.toggleSidebarVisibility} className="toggle"></a>
+            {/* <a href="#navPanel" onClick={this.toggleSidebarVisibility} className="toggle"></a> */}
+            <div onClick={this.toggleSidebarVisibility} className="toggle"></div>
+
           </div>
 
           <div id="navPanel">
