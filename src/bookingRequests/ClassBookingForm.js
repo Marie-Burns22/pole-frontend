@@ -192,7 +192,6 @@ class ClassBookingForm extends Component {
                             ? 
                             <p>Thanks!</p> 
                             : 
-                            // <button>Submit</button>
                             <ul className="actions">
                                 <li><input type='submit' value="Send Message" /></li>
                             </ul>

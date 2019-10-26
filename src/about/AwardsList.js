@@ -11,21 +11,20 @@ class AwardsList extends Component {
 
     componentDidMount() {
         fetch('https://vmpole.herokuapp.com/api/v1/awards', {
-            // credentials: "include",
             method: 'GET',
             headers: {
                 "Content-Type": "application/json",
                 "Accept": "application/json"
             },
         })
-            .then(r => r.json())
-            .then(awards => {
-                if (awards.error) {
-                    alert(awards.error)
-                } else {
-                    this.setState({ awards: awards.data })
-                }
-            })
+        .then(r => r.json())
+        .then(awards => {
+            if (awards.error) {
+                alert(awards.error)
+            } else {
+                this.setState({ awards: awards.data })
+            }
+        })
     }
 
     render() {
@@ -39,8 +38,6 @@ class AwardsList extends Component {
             </div>
         )
     }
-    
-    
 }
 
 export default AwardsList;
