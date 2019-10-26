@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 
-class ClassCard extends Component {
+class ServiceCard extends Component {
     render() {
         return (
             <div className="col-4 col-6-medium col-12-small">
@@ -23,4 +23,4 @@ class ClassCard extends Component {
     }
 }
 
-export default ClassCard;
+export default ServiceCard;

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import ClassCard from './ClassCard'
-
+import ServiceCard from './ServiceCard'
 
 class ServiceContainer extends Component {
 
@@ -14,7 +13,6 @@ class ServiceContainer extends Component {
 
     componentDidMount() {
         fetch('https://vmpole.herokuapp.com/api/v1/courses', {
-            // credentials: "include",
             method: 'GET',
             headers: {
                 "Content-Type": "application/json",
@@ -40,7 +38,7 @@ class ServiceContainer extends Component {
     render() {
         const { error, isLoaded, services } = this.state;
         const classCards = services.map(a => (
-            <ClassCard key={a.id} service={a.attributes} id={a.id} />
+            <ServiceCard key={a.id} service={a.attributes} id={a.id} />
         ))
         if (error) {
             return (
@@ -55,11 +53,6 @@ class ServiceContainer extends Component {
         } else {
             return (
             <div>
-                {/* <section id="banner">
-                    <header>
-                        <h2>Services</h2>
-                    </header>
-                </section> */}
                 <section id="main">
                     <div className="container">
                         <div className="row">
@@ -73,8 +66,6 @@ class ServiceContainer extends Component {
                             </div>
                         </div>
                     </div>
-
-
                 </section>
             </div>
             )
