@@ -37,7 +37,7 @@ class ServiceContainer extends Component {
     }
     render() {
         const { error, isLoaded, services } = this.state;
-        const classCards = services.map(a => (
+        const serviceCards = services.map(a => (
             <ServiceCard key={a.id} service={a.attributes} id={a.id} />
         ))
         if (error) {
@@ -60,8 +60,8 @@ class ServiceContainer extends Component {
                                 <header className="major">
                                     <h2>Private Sessions, Workshops, and More!</h2> 
                                 </header>
-                                    <div className="row">
-                                    {classCards}
+                                <div className="row">
+                                    {serviceCards}
                                 </div>
                             </div>
                         </div>
