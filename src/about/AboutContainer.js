@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import AwardsList from './AwardsList'
 import { Link, withRouter} from 'react-router-dom'
+import VideoContainer from '../videos/VideoContainer';
+
 
 class AboutContainer extends Component {
 
@@ -128,6 +130,7 @@ class AboutContainer extends Component {
                                 </div>
                             </div>
                         </section>
+                        <VideoContainer />
                     </section>
                 </div>
             )
