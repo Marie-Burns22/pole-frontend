@@ -16,9 +16,8 @@ class Foot extends Component {
                                     <h3>Follow Ms. Vegas on social media</h3>
                                 </header>
                                 <ul className="social">
-                                    <li><a className="icon brands fa-facebook-f" href="/"><span className="label">Facebook</span></a></li>
-                                    <li><a className="icon brands fa-twitter" href="/"><span className="label">Twitter</span></a></li>
-                                    <li><a className="icon brands fa-linkedin-in" href="/"><span className="label">LinkedIn</span></a></li>
+                                    <li><a className="icon brands fa-facebook-f" href="http://facebook.com/thefamousmsvegas" target="_blank" rel="noopener noreferrer"><span className="label">Facebook</span></a></li>
+                                    <li><a className="icon brands fa-instagram" href="http://instagram.com/thefamousmsvegas" target="_blank" rel="noopener noreferrer"><span className="label">Instagram</span></a></li>
                                 </ul>
                                 <ul className="contact">
                                     <li>
@@ -29,7 +28,7 @@ class Foot extends Component {
                                     </li>
                                     <li>
                                         <h3>Mail</h3>
-                                        <p><a href="#">info@vegasinmiamipole.com</a></p>
+                                        <p>info@vegasinmiamipole.com</p>
                                     </li>
                                 </ul>
                             </section>
@@ -39,7 +38,7 @@ class Foot extends Component {
             <div className="col-12">
                 <div id="copyright">
                     <ul className="links">
-                        <li>&copy; Untitled. All rights reserved.</li><li>Website Template Design: <a href="http://html5up.net">HTML5 UP</a></li><li>Website Built by: <a href="mariecburns.com">Marie Burns</a></li>
+                        <li>&copy; Vegas in Miami. All rights reserved.</li><li>Website Template Design: <a href="http://html5up.net">HTML5 UP</a></li><li>Website Built by: <a href="mariecburns.com">Marie Burns</a></li><li>Logo by Laura Devinsky</li>
                     </ul>
                 </div>
             </div>
