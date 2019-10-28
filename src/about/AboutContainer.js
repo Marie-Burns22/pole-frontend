@@ -92,7 +92,6 @@ class AboutContainer extends Component {
                                 <div className="col-4 col-12-medium">
                                     <section className="first">
                                         {(services.img) ? <p><img className="image featured" src={services.img} alt="dancer"></img></p> : <i className="icon solid featured fa-cog"></i>}
-
                                         <header>
                                             <h2>{services.title}</h2>
                                         </header>
@@ -105,7 +104,7 @@ class AboutContainer extends Component {
                                 </div>
                                 <div className="col-4 col-12-medium">
                                     <section className="middle">
-                                        <i className="icon solid featured alt fa-bolt"></i>
+                                        {(events.img) ? <p><img className="image featured" src={events.img} alt="dancer"></img></p> : <i className="icon solid featured alt fa-bolt"></i>}
                                         <header>
                                             <h2>{events.title}</h2>
                                         </header>
@@ -118,7 +117,7 @@ class AboutContainer extends Component {
                                 </div>
                                 <div className="col-4 col-12-medium">
                                     <section className="last">
-                                        <i className="icon solid featured alt2 fa-star"></i>
+                                        {(news.img) ? <p><img className="image featured" src={news.img} alt="dancer"></img></p> : <i className="icon solid featured alt2 fa-star"></i>}
                                         <header>
                                             <h2>{news.title}</h2>
                                         </header>
