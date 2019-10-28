@@ -53,7 +53,7 @@ class AboutContainer extends Component {
         } else if (!blurbs || blurbs === undefined || blurbs.length === 0) {
             return <h2>Welcome to Ms. Vegas in Miami! Pleae use the navigation bar to learn more about services and request bookings.</h2>
         } else {
-             const about = blurbs.find(blurb => blurb.id === "1").attributes
+            const about = blurbs.find(blurb => blurb.id === "1").attributes
             const services = blurbs.find(blurb => blurb.id === "2").attributes
             const events = blurbs.find(blurb => blurb.id === "3").attributes
             const news = blurbs.find(blurb => blurb.id === "4").attributes
@@ -91,7 +91,8 @@ class AboutContainer extends Component {
                             <div className="row">
                                 <div className="col-4 col-12-medium">
                                     <section className="first">
-                                        <i className="icon solid featured fa-cog"></i>
+                                        {(services.img) ? <p><img className="image featured" src={services.img} alt="dancer"></img></p> : <i className="icon solid featured fa-cog"></i>}
+
                                         <header>
                                             <h2>{services.title}</h2>
                                         </header>
