@@ -3,7 +3,6 @@ import AwardsList from './AwardsList'
 import { Link, withRouter} from 'react-router-dom'
 import VideoContainer from '../videos/VideoContainer';
 
-
 class AboutContainer extends Component {
 
     constructor(props) {

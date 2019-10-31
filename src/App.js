@@ -52,11 +52,11 @@ class App extends Component {
               <span className="indent-2"></span>Request Services
             </Link>
 
-            <Link to="/booking" className="link depth-2"
+            <a href="https://app.acuityscheduling.com/schedule.php?owner=18520153" target="_blank" rel="noopener noreferrer" className="link depth-2"
               onClick={this.toggleSidebarVisibility}
               style={{ WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)' }}>
               <span className="indent-2"></span>Book Private Sessions
-            </Link>
+            </a>
 
             <Link to="/news" className="link depth-1"
               onClick={this.toggleSidebarVisibility}

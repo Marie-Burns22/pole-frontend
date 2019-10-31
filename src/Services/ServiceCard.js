@@ -14,7 +14,7 @@ class ServiceCard extends Component {
                     <footer>
                         <ul className="actions">
                            <span><li><Link exact to="/infoForm" className="button btn-sm icon solid center">Request Info</Link>
-                            <Link exact to="/booking" className="button btn-sm alt icon solid center">Book Private</Link></li></span>
+                            <a href="https://app.acuityscheduling.com/schedule.php?owner=18520153" target="_blank" rel="noopener noreferrer" className="button btn-sm alt icon solid center">Book Private</a></li></span>
                         </ul>
                     </footer>
                 </section>
