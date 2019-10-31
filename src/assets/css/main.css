@@ -1614,7 +1614,7 @@ input, select, textarea {
 	button,
 	.button {
 		-webkit-appearance: none;
-		display: inline;
+		display: block;
 		text-decoration: none;
 		cursor: pointer;
 		border: 0;
