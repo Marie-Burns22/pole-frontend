@@ -13,8 +13,12 @@ class ServiceCard extends Component {
                     <p>{this.props.service.description}</p>
                     <footer>
                         <ul className="actions">
-                           <span><li><Link exact to="/infoForm" className="button btn-sm icon solid center">Request Info</Link>
-                            <a href="https://app.acuityscheduling.com/schedule.php?owner=18520153" target="_blank" rel="noopener noreferrer" className="button btn-sm alt icon solid center">Book Private</a></li></span>
+                            { this.props.id === "1"
+                            ?
+                            <span><a href="https://app.acuityscheduling.com/schedule.php?owner=18520153" target="_blank" rel="noopener noreferrer" className="button btn-sm icon solid center">Book Private</a></span>
+                            :
+                            <span><li><Link exact to="/infoForm" className="button btn-sm alt icon solid center">Request Info</Link></li></span>
+                            }  
                         </ul>
                     </footer>
                 </section>

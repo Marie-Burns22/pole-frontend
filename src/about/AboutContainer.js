@@ -50,7 +50,7 @@ class AboutContainer extends Component {
         } else if (!isLoaded) {
             return <h2>Loading</h2>
         } else if (!blurbs || blurbs === undefined || blurbs.length === 0) {
-            return <h2>Welcome to Ms. Vegas in Miami! Pleae use the navigation bar to learn more about services and request bookings.</h2>
+            return <h2>Welcome to Ms. Vegas in Miami! Please use the navigation bar to learn more about services and request bookings.</h2>
         } else {
             const about = blurbs.find(blurb => blurb.id === "1").attributes
             const services = blurbs.find(blurb => blurb.id === "2").attributes
