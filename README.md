@@ -1,4 +1,4 @@
-# Vegas in Miami Small Business Website Backend
+# Vegas in Miami Small Business Website Frontend
 Live Website: https://vmpole.netlify.com/
 
 This website was designed for a small business owner who offers classes and workshops. In addition to promoting her personal brand and services, it is also the interface for bookings and payments.
