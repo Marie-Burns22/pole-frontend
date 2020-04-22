@@ -22,8 +22,8 @@ class Navbar extends Component {
                         <li><NavLink activeClassName="current" exact to="/about">About</NavLink></li>
                         <li><NavLink activeClassName="current" exact to="/services">Services</NavLink></li>
                         {/* <li><NavLink activeClassName="current" exact to="/booking">Book Private Session</NavLink></li> */}
-                        <li><a href="https://app.acuityscheduling.com/schedule.php?owner=18520153" target="_blank" rel="noopener noreferrer">Book Private Session</a></li>
-                        <li><NavLink activeClassName="current" exact to="/infoForm">Request Services</NavLink></li>
+                        <li><a href="https://app.acuityscheduling.com/schedule.php?owner=18520153" target="_blank" rel="noopener noreferrer">Book Session</a></li>
+                        {/* <li><NavLink activeClassName="current" exact to="/infoForm">Request Services</NavLink></li> */}
                         <li><NavLink activeClassName="current" exact to="/news">News and Testimonials</NavLink></li>
                     </ul>
                 </nav>                
