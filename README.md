@@ -1,5 +1,5 @@
 # Vegas in Miami Small Business Website Frontend
-Live Website: https://vmpole.netlify.com/
+Live website is no longer available
 
 This website was designed for a small business owner who offers classes and workshops. In addition to promoting her personal brand and services, it is also the interface for bookings and payments.
 
@@ -32,11 +32,10 @@ Booking form updates availability.  Each time-slot has a status of available, re
 * See README.md in https://github.com/Marie-Burns22/pole-backend
 
 ## Status
-* Both frontend and backend are fully functional and deployed. 
-* Ready for owner to edit information and begin using.
+* This website is no longer live.
 
 ## Inspiration
 This project was inspired by Ms. Vegas who follows her dreams.
 
 ## Contact
-This project was created by Marie C. Burns. Please email me with any questions or great ideas: mariecburns@gmail.com
+This project was created by Marie C. Burns. Please email me with any questions or great ideas: mcburns2222@pm.me
